@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zynergy — zynergy.co.id
 
-## Getting Started
+Website jasa pembuatan website profesional (Phase 1: static landing page).
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router, static output) + **TypeScript**
+- **Tailwind CSS v4** — design tokens di [`src/app/globals.css`](src/app/globals.css) (tema "Synergy Blue")
+- **Framer Motion** — animasi reveal-on-scroll
+- **Radix UI Accordion** — FAQ
+- **lucide-react** — ikon
+
+## Arsitektur
+
+```
+src/
+├── app/                  # Layout (font, metadata, header/footer) + halaman
+├── content/
+│   ├── site.ts           # ⭐ Satu sumber data bisnis: nomor WA, email, nav, sosmed
+│   └── landing.ts        # ⭐ Seluruh copy & data section landing page (typed)
+├── components/
+│   ├── layout/           # Header, Footer, tombol WhatsApp melayang
+│   ├── sections/         # Satu file per section, urutan komposisi di app/page.tsx
+│   └── ui/               # Primitif reusable: Section, CtaLink, Reveal, dst.
+└── lib/                  # cn() dan waLink() helper
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Prinsip:** konten terpisah dari presentasi. Untuk mengubah teks, harga, atau
+nomor WhatsApp, cukup edit `src/content/` — tidak perlu menyentuh komponen.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Menjalankan
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm build      # produksi (static)
+pnpm lint
+```
 
-## Learn More
+## Sebelum launch — cari `TODO(launch)` di src/content/
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Ganti `whatsappNumber` placeholder dengan nomor bisnis asli
+- [ ] Finalisasi harga & benefit paket
+- [ ] Ganti testimoni placeholder dengan testimoni klien asli (wajib)
+- [ ] Ganti item portofolio dengan proyek asli + screenshot
+- [ ] Perbarui angka statistik dengan data asli
+- [ ] Isi URL sosial media asli
+- [ ] Daftarkan domain zynergy.co.id (butuh NIB + KTP untuk .co.id)
+- [ ] Pasang Meta Pixel & GA4 (Phase 1.5)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Phase 2:** Payload CMS (in-repo) + Neon Postgres — blog, portofolio dinamis,
+  form brief project dengan upload file
+- **Phase 3:** Area login klien (Payload auth)
