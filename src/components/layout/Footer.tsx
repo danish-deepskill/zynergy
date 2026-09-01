@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Mail, MapPin, Zap } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { services } from "@/content/landing";
 import { waLink } from "@/lib/wa";
+import { BrandMark } from "@/components/ui/BrandMark";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Footer() {
@@ -11,9 +12,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Link href="#beranda" className="flex items-center gap-2" aria-label={siteConfig.name}>
-            <span className="grid size-8 place-items-center rounded-lg bg-primary text-white">
-              <Zap className="size-4" fill="currentColor" />
-            </span>
+            <BrandMark />
             <span className="text-lg font-extrabold tracking-tight text-ink">
               {siteConfig.name}
               <span className="text-primary">.</span>

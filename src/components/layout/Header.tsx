@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { waLink } from "@/lib/wa";
 import { cn } from "@/lib/cn";
+import { BrandMark } from "@/components/ui/BrandMark";
 import { CtaLink } from "@/components/ui/CtaLink";
 
 export function Header() {
@@ -30,9 +31,7 @@ export function Header() {
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#beranda" className="flex items-center gap-2" aria-label={siteConfig.name}>
-          <span className="grid size-8 place-items-center rounded-lg bg-primary text-white">
-            <Zap className="size-4" fill="currentColor" />
-          </span>
+          <BrandMark />
           <span className="text-lg font-extrabold tracking-tight text-ink">
             {siteConfig.name}
             <span className="text-primary">.</span>

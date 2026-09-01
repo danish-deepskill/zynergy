@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — Jasa Pembuatan Website Profesional`,
     description: siteConfig.description,
   },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
