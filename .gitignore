@@ -32,6 +32,11 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# payload local upload dirs (Vercel Blob in prod)
+/media
+/lead-files
 
 # vercel
 .vercel

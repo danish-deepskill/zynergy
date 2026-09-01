@@ -1,11 +1,13 @@
 # Zynergy — zynergy.co.id
 
-Website jasa pembuatan website profesional (Phase 1: static landing page).
+Website jasa pembuatan website profesional. Landing page + CMS (blog,
+portofolio, form brief project, admin panel).
 
 ## Stack
 
-- **Next.js 16** (App Router, static output) + **TypeScript**
-- **Tailwind CSS v4** — design tokens di [`src/app/globals.css`](src/app/globals.css) (tema "Synergy Blue")
+- **Next.js 16** (App Router) + **TypeScript**
+- **Payload CMS 3** (in-repo) + **Postgres** — konten dinamis & admin panel di `/admin`
+- **Tailwind CSS v4** — design tokens di [`src/app/(site)/globals.css`](<src/app/(site)/globals.css>) (tema "Synergy Blue")
 - **Framer Motion** — animasi reveal-on-scroll
 - **Radix UI Accordion** — FAQ
 - **lucide-react** — ikon
@@ -14,28 +16,40 @@ Website jasa pembuatan website profesional (Phase 1: static landing page).
 
 ```
 src/
-├── app/                  # Layout (font, metadata, header/footer) + halaman
+├── app/
+│   ├── (site)/           # Frontend publik: landing, /blog, /portofolio, /brief-project
+│   └── (payload)/        # Admin panel (/admin) + REST API (/api) — scaffold Payload
+├── collections/          # Skema Payload: Posts, Projects, Media, Leads, LeadFiles, Users
 ├── content/
 │   ├── site.ts           # ⭐ Satu sumber data bisnis: nomor WA, email, nav, sosmed
-│   └── landing.ts        # ⭐ Seluruh copy & data section landing page (typed)
+│   ├── landing.ts        # ⭐ Seluruh copy & data section landing page (typed)
+│   └── brief.ts          # ⭐ Opsi form brief project (dipakai form + collection)
 ├── components/
 │   ├── layout/           # Header, Footer, tombol WhatsApp melayang
-│   ├── sections/         # Satu file per section, urutan komposisi di app/page.tsx
+│   ├── sections/         # Satu file per section, urutan komposisi di (site)/page.tsx
 │   └── ui/               # Primitif reusable: Section, CtaLink, Reveal, dst.
-└── lib/                  # cn() dan waLink() helper
+├── migrations/           # Migrasi database Payload (generated)
+├── lib/                  # cn(), waLink(), payload client, dst.
+└── payload.config.ts     # Konfigurasi Payload CMS
 ```
 
-**Prinsip:** konten terpisah dari presentasi. Untuk mengubah teks, harga, atau
-nomor WhatsApp, cukup edit `src/content/` — tidak perlu menyentuh komponen.
+**Prinsip:** konten terpisah dari presentasi. Copy statis di `src/content/`,
+konten dinamis (artikel, portofolio, leads) di CMS — edit via `/admin`.
 
-## Menjalankan
+## Menjalankan (lokal)
 
 ```bash
+docker start zynergy-pg   # Postgres lokal (sekali buat: lihat .env.example)
 pnpm install
-pnpm dev        # http://localhost:3000
-pnpm build      # produksi (static)
-pnpm lint
+cp .env.example .env.local  # isi PAYLOAD_SECRET (openssl rand -hex 32)
+pnpm payload migrate      # terapkan skema database
+pnpm seed                 # admin dev (dev@zynergy.local) + konten contoh
+pnpm dev                  # http://localhost:3000 — admin di /admin
+pnpm build && pnpm lint
 ```
+
+Ubah skema collection? Jalankan `pnpm payload migrate:create <nama>` lalu
+commit file migrasinya, dan `pnpm generate:types`.
 
 ## Sebelum launch — cari `TODO(launch)` di src/content/
 

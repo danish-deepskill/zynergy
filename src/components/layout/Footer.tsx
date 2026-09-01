@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="border-t border-line bg-white px-4 py-14 sm:px-6 lg:px-8">
       <div className="mx-auto grid w-full max-w-6xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="#beranda" className="flex items-center gap-2" aria-label={siteConfig.name}>
+          <Link href="/#beranda" className="flex items-center gap-2" aria-label={siteConfig.name}>
             <BrandMark />
             <span className="text-lg font-extrabold tracking-tight text-ink">
               {siteConfig.name}

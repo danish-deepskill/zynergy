@@ -36,12 +36,13 @@ export const siteConfig = {
   },
 
   nav: [
-    { label: "Beranda", href: "#beranda" },
-    { label: "Layanan", href: "#layanan" },
-    { label: "Paket Harga", href: "#paket" },
-    { label: "Proses", href: "#proses" },
-    { label: "Portofolio", href: "#portofolio" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Kontak", href: "#kontak" },
+    { label: "Beranda", href: "/#beranda" },
+    { label: "Layanan", href: "/#layanan" },
+    { label: "Paket Harga", href: "/#paket" },
+    { label: "Proses", href: "/#proses" },
+    { label: "Portofolio", href: "/portofolio" },
+    { label: "Blog", href: "/blog" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "Kontak", href: "/#kontak" },
   ] satisfies NavItem[],
 } as const;

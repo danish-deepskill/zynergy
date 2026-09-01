@@ -14,8 +14,15 @@ Build **zynergy.co.id** — a website-services agency site for the Indonesian ma
 modeled on the competitor **https://www.digitalinaja.id/** ("CreativeAI").
 User/team: team@deepskill.io.
 
-**Status: Phase 1 (static landing page) is BUILT and VERIFIED** in this repo.
-Next milestone: content finalization → Vercel deploy → Phase 2 (CMS).
+**Status (2026-09-02): Phase 1 LIVE on https://zynergy-dev.vercel.app**
+(Vercel project `zynergy`, personal scope `devdanzen-projects`, no git
+integration — deploy via `vercel deploy --prod`). **Phase 2 (Payload CMS 3 +
+Postgres) is BUILT and VERIFIED locally**: blog, portofolio, brief-project
+lead form, admin panel at `/admin`. See README for local dev workflow
+(docker `zynergy-pg`, migrate, seed). Prod deploy of Phase 2 still needs:
+Neon Postgres + Vercel Blob (user approval for new services), env vars on
+Vercel, `payload migrate` against Neon. Remaining: real content
+(TODO(launch)), domain registration (NIB + KTP), Meta Pixel + GA4.
 
 ---
 
