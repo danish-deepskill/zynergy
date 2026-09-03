@@ -29,7 +29,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Nama Anggota", // TODO(launch)
     role: "Lead",
-    bio: "Mengarahkan visi, kualitas, dan prioritas di setiap proyek.",
+    bio: "Mengarahkan strategi, visi, dan kualitas di setiap proyek.",
   },
   {
     name: "Nama Anggota", // TODO(launch)
