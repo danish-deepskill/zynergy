@@ -139,7 +139,7 @@ export const supplyPage = {
     { name: "PT Trakindo Utama", logo: "/clients/trakindo.png", width: 400, height: 104 },
     { name: "PT Sorikmas Mining", logo: "/clients/sorikmas-mining.png", width: 100, height: 100 },
     { name: "PT Gunung Madu Plantations", logo: "/clients/gunung-madu.png", width: 284, height: 160 },
-    { name: "PT Trinitan Metals", logo: "/clients/trinitan.png", width: 160, height: 160 },
+    { name: "PT Trinitan Metals & Minerals", logo: "/clients/trinitan.png", width: 160, height: 160 },
     { name: "Hyundai Engineering & Construction", logo: "/clients/hyundai-enc.png", width: 898, height: 160 },
     { name: "Brunel Services Indonesia", logo: "/clients/brunel.png", width: 628, height: 158 },
     { name: "Fluor-Petrosea Joint Organization", logo: "/clients/fluor-petrosea.png", width: 746, height: 160 },
