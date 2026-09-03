@@ -14,15 +14,23 @@ Build **zynergy.co.id** — a website-services agency site for the Indonesian ma
 modeled on the competitor **https://www.digitalinaja.id/** ("CreativeAI").
 User/team: team@deepskill.io.
 
-**Status (2026-09-02): Phase 1 LIVE on https://zynergy-dev.vercel.app**
-(Vercel project `zynergy`, personal scope `devdanzen-projects`, no git
-integration — deploy via `vercel deploy --prod`). **Phase 2 (Payload CMS 3 +
-Postgres) is BUILT and VERIFIED locally**: blog, portofolio, brief-project
-lead form, admin panel at `/admin`. See README for local dev workflow
-(docker `zynergy-pg`, migrate, seed). Prod deploy of Phase 2 still needs:
-Neon Postgres + Vercel Blob (user approval for new services), env vars on
-Vercel, `payload migrate` against Neon. Remaining: real content
-(TODO(launch)), domain registration (NIB + KTP), Meta Pixel + GA4.
+**Status (2026-09-03): Phase 2 LIVE on https://zynergy-dev.vercel.app**
+(Vercel project `zynergy`, scope `devdanzen-projects`, deploy via
+`vercel deploy --prod`). Prod infra: **Neon Postgres** (marketplace resource
+`neon-yellow-window`, us-east-1, co-located with iad1 functions) + **Vercel
+Blob** (`zynergy-uploads`, public). Migrations run automatically at build
+time (see `vercel.json` — unpooled connection for migrate, pooled at
+runtime). Code is on GitHub: **danish-deepskill/zynergy** (public, no
+Vercel git integration yet — connecting it in the dashboard would enable
+auto-deploy on push). Blog/portfolio/leads verified live; prod admin awaits
+first-user creation at `/admin` (prod was deliberately NOT seeded; the seed
+dev login is local-only). Local dev workflow unchanged (docker `zynergy-pg`,
+README). Gotchas learned: the Payload Blob plugin must stay registered
+unconditionally (enabled-flag gating) or the admin importMap breaks on
+Vercel; a stray unused Neon resource `neon-sky-ferry` sits in the DeepSkill
+team scope and can be removed. Remaining: real content (TODO(launch)),
+domain registration (NIB + KTP), Meta Pixel + GA4, optional admin
+rebranding (login page shows default Payload logo).
 
 ---
 
@@ -126,17 +134,21 @@ Hero visual is a CSS-only browser mockup — no image assets exist yet.
 
 ## 6. Next steps (in order)
 
-1. Fill real content (section 5 above)
-2. Add favicon/logo + OG image (`src/app/` — currently default Next icons)
-3. **Deploy to Vercel** (repo has git init'd but nothing committed beyond
-   create-next-app scaffold — commit first)
-4. **Domain:** register zynergy.co.id early — .co.id requires **NIB + KTP**
+~~Done: branding/OG image, git + GitHub, Vercel deploy, Phase 2 build &
+prod deploy (Neon + Blob + build-time migrations).~~
+
+1. Create the first prod admin user at https://zynergy-dev.vercel.app/admin
+   (user does this; use a real email + strong password)
+2. Fill real content (section 5 above) — via `/admin` for blog/portfolio,
+   via `src/content/` for landing copy/pricing/testimonials
+3. **Domain:** register zynergy.co.id early — .co.id requires **NIB + KTP**
    via an Indonesian registrar; DNS → Vercel
-5. Meta Pixel + GA4 via `next/script` (was deferred; add before running ads)
-6. Phase 2: Payload CMS 3 in-repo + Neon Postgres + Vercel Blob →
-   blog, dynamic portfolio, brief-project lead form (mirror competitor's form
-   fields, listed in section 2), admin panel for staff
-7. Phase 3 (optional): client login via Payload auth
+4. Meta Pixel + GA4 via `next/script` (was deferred; add before running ads)
+5. Optional polish: Zynergy branding on the admin login (custom
+   `admin.components.graphics`), on-demand revalidation hook so new posts
+   appear on /blog instantly (pages cache for 1h), connect Vercel↔GitHub
+   for auto-deploys, delete stray `neon-sky-ferry` resource (DeepSkill team)
+6. Phase 3 (optional): client login via Payload auth
 
 ---
 
