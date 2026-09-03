@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { waLink } from "@/lib/wa";
@@ -12,6 +13,9 @@ import { CtaLink } from "@/components/ui/CtaLink";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  // The gateway (/) opens on the Deep Navy hero; float light text over it.
+  const onDark = pathname === "/" && !scrolled && !menuOpen;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -32,9 +36,14 @@ export function Header() {
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2" aria-label={siteConfig.name}>
           <BrandMark />
-          <span className="text-lg font-extrabold tracking-tight text-ink">
+          <span
+            className={cn(
+              "text-lg font-extrabold tracking-tight transition-colors",
+              onDark ? "text-white" : "text-ink",
+            )}
+          >
             {siteConfig.name}
-            <span className="text-primary">.</span>
+            <span className={onDark ? "text-navy-accent" : "text-primary"}>.</span>
           </span>
         </Link>
 
@@ -43,7 +52,10 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted transition-colors hover:text-primary"
+              className={cn(
+                "text-sm font-medium transition-colors",
+                onDark ? "text-navy-ink hover:text-white" : "text-muted hover:text-primary",
+              )}
             >
               {item.label}
             </Link>
@@ -58,7 +70,10 @@ export function Header() {
 
         <button
           type="button"
-          className="grid size-10 place-items-center rounded-lg text-ink lg:hidden"
+          className={cn(
+            "grid size-10 place-items-center rounded-lg lg:hidden",
+            onDark ? "text-white" : "text-ink",
+          )}
           aria-expanded={menuOpen}
           aria-label={menuOpen ? "Tutup menu" : "Buka menu"}
           onClick={() => setMenuOpen((open) => !open)}

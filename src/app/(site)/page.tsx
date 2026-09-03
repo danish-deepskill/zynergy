@@ -27,23 +27,33 @@ export default function Home() {
           sameAs: Object.values(siteConfig.socials),
         }}
       />
-      <section id="beranda" className="px-4 pb-16 pt-36 text-center sm:px-6 sm:pt-44 lg:px-8">
-        <div className="mx-auto w-full max-w-4xl">
-          <Reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-muted">
-              {companyHome.eyebrow}
-            </p>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-              {companyHome.title}
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-              {companyHome.subtitle}
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      {/* Deep Navy group treatment: gateway only; funnel pages stay light */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-navy to-navy-light">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-40 -top-40 size-[30rem] rounded-full bg-primary/20 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-40 bottom-0 size-[30rem] rounded-full bg-secondary/10 blur-3xl"
+        />
+        <section id="beranda" className="relative px-4 pb-16 pt-36 text-center sm:px-6 sm:pt-44 lg:px-8">
+          <div className="mx-auto w-full max-w-4xl">
+            <Reveal>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-navy-accent">
+                {companyHome.eyebrow}
+              </p>
+              <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+                {companyHome.title}
+              </h1>
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-navy-ink sm:text-lg">
+                {companyHome.subtitle}
+              </p>
+            </Reveal>
+          </div>
+        </section>
 
-      <section className="px-4 pb-24 sm:px-6 lg:px-8">
+        <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
         {/* Row 1: agency triangle (3 equal). Row 2: Products + Supply (2 wide). */}
         <div className="mx-auto grid w-full max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-6">
           {businessLines.map((line, index) => (
@@ -58,33 +68,33 @@ export default function Home() {
             >
               <article
                 className={cn(
-                  "relative flex h-full flex-col rounded-3xl border bg-white p-6 transition-all",
+                  "relative flex h-full flex-col rounded-3xl border p-6 transition-all",
                   line.flagship
-                    ? "border-primary/30 shadow-lg shadow-primary/10 hover:shadow-lg"
+                    ? "border-navy-accent/40 bg-white/10 shadow-lg shadow-black/20 backdrop-blur-sm"
                     : line.upcoming
-                      ? "border-dashed border-line"
-                      : "border-line hover:border-primary/30 hover:shadow-lg",
+                      ? "border-dashed border-white/15 bg-white/[0.03]"
+                      : "border-white/10 bg-white/5 backdrop-blur-sm hover:border-navy-accent/40",
                 )}
               >
                 {line.upcoming && (
-                  <span className="absolute right-4 top-4 rounded-full bg-primary-soft px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-dark">
+                  <span className="absolute right-4 top-4 rounded-full bg-white/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-navy-accent">
                     Segera
                   </span>
                 )}
                 <span
                   className={cn(
                     "grid size-12 place-items-center rounded-2xl",
-                    line.flagship ? "bg-primary text-white" : "bg-primary-soft text-primary",
+                    line.flagship ? "bg-primary text-white" : "bg-white/10 text-navy-accent",
                   )}
                 >
                   <line.icon className="size-6" />
                 </span>
-                <h2 className="mt-5 text-lg font-extrabold text-ink">{line.name}</h2>
-                <p className="text-sm font-semibold text-primary">{line.tagline}</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{line.description}</p>
+                <h2 className="mt-5 text-lg font-extrabold text-white">{line.name}</h2>
+                <p className="text-sm font-semibold text-navy-accent">{line.tagline}</p>
+                <p className="mt-3 text-sm leading-relaxed text-navy-ink">{line.description}</p>
                 <ul className="mt-4 space-y-1.5">
                   {line.points.map((point) => (
-                    <li key={point} className="flex items-center gap-2 text-sm text-muted">
+                    <li key={point} className="flex items-center gap-2 text-sm text-navy-ink">
                       <Check className="size-3.5 shrink-0 text-secondary" />
                       {point}
                     </li>
@@ -92,14 +102,18 @@ export default function Home() {
                 </ul>
                 <div className="mt-auto pt-6">
                   {line.upcoming ? (
-                    <span className="inline-flex w-full items-center justify-center rounded-xl border border-dashed border-line px-6 py-3 text-sm font-semibold text-muted">
+                    <span className="inline-flex w-full items-center justify-center rounded-xl border border-dashed border-white/15 px-6 py-3 text-sm font-semibold text-navy-ink">
                       Segera Hadir
                     </span>
                   ) : (
                     <CtaLink
                       href={line.href}
                       variant={line.flagship ? "primary" : "outline"}
-                      className="w-full"
+                      className={cn(
+                        "w-full",
+                        !line.flagship &&
+                          "border-white/20 bg-transparent text-white hover:border-navy-accent hover:bg-white/5 hover:text-white",
+                      )}
                     >
                       {line.cta}
                       <ArrowRight className="size-4" />
@@ -110,13 +124,14 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
-        <p className="mt-12 text-center text-sm text-muted">
-          Ingin kenal orang-orang di baliknya?{" "}
-          <Link href="/tentang" className="font-semibold text-primary hover:underline">
-            Tentang kami
-          </Link>
-        </p>
-      </section>
+          <p className="mt-12 text-center text-sm text-navy-ink">
+            Ingin kenal orang-orang di baliknya?{" "}
+            <Link href="/tentang" className="font-semibold text-navy-accent hover:underline">
+              Tentang kami
+            </Link>
+          </p>
+        </section>
+      </div>
     </>
   );
 }

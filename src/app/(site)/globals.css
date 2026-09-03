@@ -17,6 +17,11 @@
   --color-surface: #fbfcfe;
   --color-surface-soft: #f4f7fb;
   --color-line: #e6eaf2;
+  /* Deep Navy: premium dark treatment for group-level "brand moments" only */
+  --color-navy: #0b1b3f;
+  --color-navy-light: #12275c;
+  --color-navy-ink: #b7c4de;
+  --color-navy-accent: #7ea6f8;
 }
 
 html {
