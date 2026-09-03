@@ -17,10 +17,12 @@ export function Pricing() {
           <Reveal key={tier.name} delay={index * 0.07}>
             <article
               className={cn(
-                "relative h-full rounded-2xl border bg-white p-7",
+                "relative h-full rounded-2xl border p-7",
                 tier.highlighted
-                  ? "border-primary shadow-xl shadow-primary/10 lg:-mt-4 lg:mb-4"
-                  : "border-line",
+                  ? "border-primary bg-white shadow-xl shadow-primary/10 lg:-mt-4 lg:mb-4"
+                  : tier.premium
+                    ? "border-navy bg-gradient-to-br from-navy to-navy-light shadow-lg shadow-navy/20"
+                    : "border-line bg-white",
               )}
             >
               {tier.badge && (
@@ -28,16 +30,42 @@ export function Pricing() {
                   {tier.badge}
                 </span>
               )}
-              <h3 className="text-lg font-bold text-ink">Paket {tier.name}</h3>
-              <p className="mt-1.5 min-h-10 text-sm text-muted">{tier.description}</p>
-              <p className="mt-5 flex items-baseline gap-1.5">
-                <span className="text-sm font-semibold text-muted">Rp</span>
-                <span className="text-4xl font-extrabold tracking-tight text-ink">{tier.price}</span>
-                <span className="text-sm text-muted">{tier.period}</span>
+              <h3 className={cn("text-lg font-bold", tier.premium ? "text-white" : "text-ink")}>
+                Paket {tier.name}
+              </h3>
+              <p className={cn("mt-1.5 min-h-10 text-sm", tier.premium ? "text-navy-ink" : "text-muted")}>
+                {tier.description}
               </p>
-              <ul className="mt-6 space-y-2.5 border-t border-line pt-6">
+              <p className="mt-5 flex items-baseline gap-1.5">
+                <span className={cn("text-sm font-semibold", tier.premium ? "text-navy-ink" : "text-muted")}>
+                  Rp
+                </span>
+                <span
+                  className={cn(
+                    "text-4xl font-extrabold tracking-tight",
+                    tier.premium ? "text-white" : "text-ink",
+                  )}
+                >
+                  {tier.price}
+                </span>
+                <span className={cn("text-sm", tier.premium ? "text-navy-ink" : "text-muted")}>
+                  {tier.period}
+                </span>
+              </p>
+              <ul
+                className={cn(
+                  "mt-6 space-y-2.5 border-t pt-6",
+                  tier.premium ? "border-white/10" : "border-line",
+                )}
+              >
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5 text-sm text-muted">
+                  <li
+                    key={feature}
+                    className={cn(
+                      "flex items-start gap-2.5 text-sm",
+                      tier.premium ? "text-navy-ink" : "text-muted",
+                    )}
+                  >
                     <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-secondary" />
                     {feature}
                   </li>
@@ -46,7 +74,11 @@ export function Pricing() {
               <CtaLink
                 href={waLink(siteConfig.waMessages.package(tier.name))}
                 variant={tier.highlighted ? "primary" : "outline"}
-                className="mt-7 w-full"
+                className={cn(
+                  "mt-7 w-full",
+                  tier.premium &&
+                    "border-transparent bg-white text-navy hover:border-transparent hover:bg-surface-soft hover:text-navy",
+                )}
               >
                 Pilih Paket {tier.name}
               </CtaLink>

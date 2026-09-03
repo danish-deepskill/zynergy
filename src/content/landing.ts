@@ -37,6 +37,8 @@ export interface PricingTier {
   price: string;
   period: string;
   highlighted: boolean;
+  /** Deep Navy card treatment untuk tier paling eksklusif. */
+  premium?: boolean;
   badge?: string;
   features: string[];
 }
@@ -239,6 +241,7 @@ export const pricing = {
       price: "1.5JT",
       period: "/ tahun",
       highlighted: false,
+      premium: true,
       features: [
         "Semua benefit paket Business",
         "Desain eksklusif high-converting",
