@@ -133,9 +133,13 @@ quiz (6 pain questions → verdict + feature recommendations, content in
 (18-feature catalog in `src/content/features.ts`, skeleton-wireframe
 thumbnails, business-type presets). Selection lives in the shareable
 `?f=` query param; checkout = pre-filled WhatsApp message. Landing page
-carries a teaser banner linking here. Planned next: landing overhaul in
-the modern Indonesian style (big type, minimal copy per section, refs:
-qasir.id, flip.id, hostinger.com/id).
+carries a teaser banner linking here. The landing overhaul (big type,
+minimal copy per section, refs: qasir.id, flip.id, hostinger.com/id)
+shipped 2026-09-03: hero repositioned to WaaS ("Websitenya Kami Urus.
+Anda Fokus Jualan."), problems 6→4 cards, why-us 8→4. `/tentang` exists
+with TODO(launch) placeholder team members (content in
+`src/content/team.ts`; awaiting real names, roles, photos), linked from
+the footer. Everything above is deployed to prod.
 
 All copy is **original Indonesian** (intent mirrors competitor, wording does not).
 Hero visual is a CSS-only browser mockup, no image assets exist yet.
