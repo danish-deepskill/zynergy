@@ -52,13 +52,13 @@ export const businessLines: BusinessLine[] = [
   },
   {
     value: "pengadaan",
-    name: "Pengadaan Barang",
-    tagline: "Electrical, Industri & Mining",
+    name: "Zynergy Supply",
+    tagline: "Pengadaan Electrical, Industri & Mining",
     description:
-      "Lini pengadaan PT Sinergi Mitra Abadi Jaya: supplier kebutuhan kelistrikan, industri, dan pertambangan.",
+      "Lini pengadaan barang PT Sinergi Mitra Abadi Jaya: supplier kebutuhan kelistrikan, industri, dan pertambangan.",
     points: ["Peralatan kelistrikan", "Kebutuhan industri", "Supply pertambangan"],
     href: "/pengadaan",
-    cta: "Lihat Pengadaan",
+    cta: "Jelajahi Supply",
     icon: Boxes,
   },
 ];
