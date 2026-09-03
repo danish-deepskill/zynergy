@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { businessLines, companyHome } from "@/content/company";
 import { siteConfig } from "@/content/site";
@@ -87,6 +88,12 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
+        <p className="mt-12 text-center text-sm text-muted">
+          Ingin kenal orang-orang di baliknya?{" "}
+          <Link href="/tentang" className="font-semibold text-primary hover:underline">
+            Tentang kami
+          </Link>
+        </p>
       </section>
     </>
   );
