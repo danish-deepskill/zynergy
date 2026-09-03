@@ -5,6 +5,15 @@ import { services } from "@/content/landing";
 import { waLink } from "@/lib/wa";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
+import { InstagramIcon } from "@/components/ui/InstagramIcon";
+import { FacebookIcon, LinkedInIcon, YouTubeIcon } from "@/components/ui/SocialIcons";
+
+const socialLinks = [
+  { label: "Instagram", href: siteConfig.socials.instagram, Icon: InstagramIcon },
+  { label: "LinkedIn", href: siteConfig.socials.linkedin, Icon: LinkedInIcon },
+  { label: "Facebook", href: siteConfig.socials.facebook, Icon: FacebookIcon },
+  { label: "YouTube", href: siteConfig.socials.youtube, Icon: YouTubeIcon },
+];
 
 export function Footer() {
   return (
@@ -19,6 +28,21 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-muted">{siteConfig.tagline}</p>
+          <ul className="mt-5 flex gap-2.5">
+            {socialLinks.map(({ label, href, Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="grid size-9 place-items-center rounded-full border border-line text-muted transition-colors hover:border-primary/40 hover:text-primary"
+                >
+                  <Icon className="size-4" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <nav aria-label="Navigasi footer">
