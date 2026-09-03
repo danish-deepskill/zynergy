@@ -79,11 +79,16 @@ export function FeatureExplorer() {
             <h3 className="mb-4 text-xs font-bold uppercase tracking-wider text-muted">
               {category.label}
             </h3>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Carousel on mobile/tablet, grid on desktop */}
+            <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0">
               {featureCatalog
                 .filter((f) => f.category === category.value)
                 .map((feature, index) => (
-                  <Reveal key={feature.value} delay={index * 0.04}>
+                  <Reveal
+                    key={feature.value}
+                    delay={index * 0.04}
+                    className="w-64 shrink-0 snap-start sm:w-72 lg:w-auto"
+                  >
                     <FeatureCard
                       feature={feature}
                       selected={selected.includes(feature.value)}
