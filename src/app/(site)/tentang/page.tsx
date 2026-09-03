@@ -52,8 +52,8 @@ export default function TentangPage() {
                     : "border-line",
                 )}
               >
-                {/* Slot foto profil (4:3). TODO(launch): isi member.photo */}
-                <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-primary-soft via-surface-soft to-secondary-soft">
+                {/* Slot foto profil (3:4 portrait). TODO(launch): isi member.photo */}
+                <div className="relative aspect-[3/4] w-full bg-gradient-to-br from-primary-soft via-surface-soft to-secondary-soft">
                   {member.photo ? (
                     <Image
                       src={member.photo}
