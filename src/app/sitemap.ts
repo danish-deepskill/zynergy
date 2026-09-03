@@ -6,7 +6,7 @@ export const revalidate = 3600;
 
 const staticRoutes: { path: string; priority: number }[] = [
   { path: "/", priority: 0.8 },
-  { path: "/digital", priority: 1 },
+  { path: "/teknologi", priority: 1 },
   { path: "/racik-fitur", priority: 0.9 },
   { path: "/brief-project", priority: 0.9 },
   { path: "/desain", priority: 0.7 },

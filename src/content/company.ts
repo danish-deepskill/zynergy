@@ -32,19 +32,19 @@ export const companyHome = {
   eyebrow: "PT Sinergi Mitra Abadi Jaya",
   title: "Membantu Bisnis Bertumbuh lewat Teknologi, Desain, dan Pemasaran.",
   subtitle:
-    "Zynergy adalah rumah bagi lima lini bisnis PT Sinergi Mitra Abadi Jaya: digital, desain, pemasaran, produk software, dan pengadaan barang industri.",
+    "Zynergy adalah rumah bagi lima lini bisnis PT Sinergi Mitra Abadi Jaya: teknologi, desain, pemasaran, produk software, dan pengadaan barang industri.",
 } as const;
 
 export const businessLines: BusinessLine[] = [
   {
-    value: "digital",
-    name: "Zynergy Digital",
+    value: "technology",
+    name: "Zynergy Technology",
     tagline: "Website, Aplikasi & Mobile",
     description:
       "Website profesional untuk UMKM dan bisnis lokal, lengkap dengan CMS, blog, dan integrasi WhatsApp.",
     points: ["Website bisnis & UMKM", "Aplikasi web & mobile", "CMS + admin panel"],
-    href: "/digital",
-    cta: "Jelajahi Digital",
+    href: "/teknologi",
+    cta: "Jelajahi Technology",
     icon: MonitorSmartphone,
     flagship: true,
   },

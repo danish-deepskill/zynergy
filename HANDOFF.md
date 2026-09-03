@@ -104,8 +104,8 @@ src/
 
 **Site structure (since 2026-09-03):** the root `/` is a thin group gateway
 showing the five business lines of PT Sinergi Mitra Abadi Jaya under the
-Zynergy brand (content in `src/content/company.ts`): Zynergy Digital
-(flagship, full landing funnel moved wholesale to `/digital`), Zynergy
+Zynergy brand (content in `src/content/company.ts`): Zynergy Technology
+(flagship, full landing funnel at `/teknologi` (renamed from /digital, 301 kept)), Zynergy
 Design (`/desain`, lean page; `/design` 301-redirects to it), Zynergy
 Supply (`/pengadaan`, lean page, contracts run under the PT name), and
 Zynergy Marketing (upcoming card, no page yet), and Zynergy Products
@@ -123,13 +123,13 @@ marketing cards, built only when the first product is announceable; no
 "coming soon" shells). Incubate under the Zynergy umbrella, graduate to
 own brand after proven demand. Sequencing: productized vertical services
 and possibly a course first; they fund and reveal the first real product.
-Point all ads/SEO/social links at `/digital`, not `/`. Footer carries the
+Point all ads/SEO/social links at `/teknologi`, not `/`. Footer carries the
 PT endorsement line; `legalName` is the real PT. SEO plumbing: sitemap.ts,
 robots.ts, JSON-LD (Organization on `/`, ProfessionalService + FAQPage on
 `/digital`, BlogPosting on posts). SEO strategy: vertical long-tail + local
 + blog content into the Cek quiz; ads for near-term leads.
 
-Landing (`/digital`) section anchor ids: beranda, masalah, layanan, fitur
+Landing (`/teknologi`) section anchor ids: beranda, masalah, layanan, fitur
 (teaser), keunggulan, paket, proses, portofolio, testimoni, faq, kontak.
 
 **/racik-fitur (added 2026-09-03):** lead-gen tool page, "Cek" diagnostic
