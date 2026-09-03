@@ -6,6 +6,8 @@ import { RichText } from "@payloadcms/richtext-lexical/react";
 import type { Media } from "@/payload-types";
 import { getPayloadClient } from "@/lib/payload";
 import { formatDate } from "@/lib/date";
+import { siteConfig } from "@/content/site";
+import { JsonLd } from "@/components/ui/JsonLd";
 
 export const revalidate = 3600;
 
@@ -57,6 +59,18 @@ export default async function BlogPostPage({ params }: Args) {
 
   return (
     <article className="px-4 pb-20 pt-32 sm:px-6 sm:pb-24 lg:px-8">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.excerpt ?? undefined,
+          datePublished: post.publishedAt ?? undefined,
+          dateModified: post.updatedAt,
+          url: `${siteConfig.url}/blog/${post.slug}`,
+          author: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
+        }}
+      />
       <div className="mx-auto w-full max-w-3xl">
         <Link
           href="/blog"

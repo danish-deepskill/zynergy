@@ -102,8 +102,19 @@ src/
 └── lib/            cn.ts (clsx+twMerge), wa.ts (waLink builder)
 ```
 
-Section anchor ids: beranda, masalah, layanan, fitur (teaser), keunggulan,
-paket, proses, portofolio, testimoni, faq, kontak.
+**Site structure (since 2026-09-03):** the root `/` is a thin group gateway
+showing the three business lines of PT Sinergi Mitra Abadi Jaya under the
+Zynergy brand (content in `src/content/company.ts`): Digital (flagship,
+full landing funnel moved wholesale to `/digital`), Design (`/design`,
+lean page), Pengadaan (`/pengadaan`, lean page, runs under the PT name).
+Point all ads/SEO/social links at `/digital`, not `/`. Footer carries the
+PT endorsement line; `legalName` is the real PT. SEO plumbing: sitemap.ts,
+robots.ts, JSON-LD (Organization on `/`, ProfessionalService + FAQPage on
+`/digital`, BlogPosting on posts). SEO strategy: vertical long-tail + local
++ blog content into the Cek quiz; ads for near-term leads.
+
+Landing (`/digital`) section anchor ids: beranda, masalah, layanan, fitur
+(teaser), keunggulan, paket, proses, portofolio, testimoni, faq, kontak.
 
 **/racik-fitur (added 2026-09-03):** lead-gen tool page, "Cek" diagnostic
 quiz (6 pain questions → verdict + feature recommendations, content in

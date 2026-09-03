@@ -9,7 +9,8 @@ export interface NavItem {
  */
 export const siteConfig = {
   name: "Zynergy",
-  legalName: "Zynergy Digital",
+  legalName: "PT Sinergi Mitra Abadi Jaya",
+  endorsement: "Unit bisnis digital & kreatif dari PT Sinergi Mitra Abadi Jaya.",
   domain: "zynergy.co.id",
   url: "https://zynergy.co.id",
   tagline: "Jasa pembuatan website profesional untuk UMKM, personal brand, dan bisnis lokal.",
@@ -35,17 +36,20 @@ export const siteConfig = {
       `Halo Zynergy! Saya tertarik dengan paket ${packageName}. Mohon info lebih lanjut ya.`,
     features: (featureList: string) =>
       `Halo Zynergy! Saya ingin website dengan fitur: ${featureList}. Bisa dibantu rekomendasinya?`,
+    design:
+      "Halo Zynergy! Saya ingin konsultasi kebutuhan desain (logo/konten/animasi). Bisa dibantu?",
+    pengadaan:
+      "Halo, saya ingin menghubungi tim pengadaan PT Sinergi Mitra Abadi Jaya terkait kebutuhan barang.",
   },
 
   nav: [
-    { label: "Beranda", href: "/#beranda" },
-    { label: "Layanan", href: "/#layanan" },
+    { label: "Beranda", href: "/" },
+    { label: "Digital", href: "/digital" },
     { label: "Racik Fitur", href: "/racik-fitur" },
-    { label: "Paket Harga", href: "/#paket" },
-    { label: "Proses", href: "/#proses" },
+    { label: "Paket Harga", href: "/digital#paket" },
     { label: "Portofolio", href: "/portofolio" },
     { label: "Blog", href: "/blog" },
-    { label: "FAQ", href: "/#faq" },
-    { label: "Kontak", href: "/#kontak" },
+    { label: "FAQ", href: "/digital#faq" },
+    { label: "Kontak", href: "/digital#kontak" },
   ] satisfies NavItem[],
 } as const;

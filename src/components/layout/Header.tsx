@@ -30,7 +30,7 @@ export function Header() {
       )}
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/#beranda" className="flex items-center gap-2" aria-label={siteConfig.name}>
+        <Link href="/" className="flex items-center gap-2" aria-label={siteConfig.name}>
           <BrandMark />
           <span className="text-lg font-extrabold tracking-tight text-ink">
             {siteConfig.name}
