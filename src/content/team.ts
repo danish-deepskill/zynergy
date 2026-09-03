@@ -8,7 +8,9 @@ export interface TeamMember {
   name: string;
   role: string;
   bio: string;
-  /** Extra credibility line, e.g. the advisor's own business. */
+  /** Path under /public, e.g. "/team/nama.jpg". Absent = initials placeholder. */
+  photo?: string;
+  /** Extra credibility line, e.g. an advisor's own business. */
   note?: string;
   highlight?: boolean;
 }

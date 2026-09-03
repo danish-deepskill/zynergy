@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { teamMembers, tentangSection } from "@/content/team";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/cn";
@@ -45,28 +46,38 @@ export default function TentangPage() {
             <Reveal key={`${member.role}-${index}`} delay={index * 0.05} className="h-full">
               <article
                 className={cn(
-                  "flex h-full flex-col rounded-2xl border bg-white p-6",
+                  "flex h-full flex-col overflow-hidden rounded-2xl border bg-white",
                   member.highlight
                     ? "border-secondary/40 shadow-md shadow-secondary/10"
                     : "border-line",
                 )}
               >
-                <span
-                  className={cn(
-                    "grid size-14 place-items-center rounded-2xl text-lg font-extrabold",
-                    member.highlight
-                      ? "bg-secondary text-white"
-                      : "bg-primary-soft text-primary",
+                {/* Slot foto profil (4:3). TODO(launch): isi member.photo */}
+                <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-primary-soft via-surface-soft to-secondary-soft">
+                  {member.photo ? (
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <span className="grid h-full w-full place-items-center text-4xl font-extrabold tracking-wide text-primary/40">
+                      {initials(member.name)}
+                    </span>
                   )}
-                >
-                  {initials(member.name)}
-                </span>
-                <h3 className="mt-4 text-base font-bold text-ink">{member.name}</h3>
-                <p className="text-sm font-semibold text-primary">{member.role}</p>
-                {member.note && (
-                  <p className="mt-0.5 text-xs font-medium text-secondary-dark">{member.note}</p>
-                )}
-                <p className="mt-3 text-sm leading-relaxed text-muted">{member.bio}</p>
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-base font-bold text-ink">{member.name}</h3>
+                  <p className="text-sm font-semibold text-primary">{member.role}</p>
+                  {member.note && (
+                    <p className="mt-0.5 text-xs font-medium text-secondary-dark">
+                      {member.note}
+                    </p>
+                  )}
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{member.bio}</p>
+                </div>
               </article>
             </Reveal>
           ))}
