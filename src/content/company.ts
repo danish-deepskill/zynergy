@@ -1,13 +1,15 @@
 import {
   Boxes,
   Cable,
-  Cog,
+  Factory,
+  HardHat,
   type LucideIcon,
   Megaphone,
   MonitorSmartphone,
   Package,
   Palette,
   Router,
+  Wrench,
   Zap,
 } from "lucide-react";
 
@@ -151,10 +153,22 @@ export const supplyPage = {
       examples: "MCB Schneider, panel box, kabel N2XY/NYY, Phoenix Contact",
     },
     {
-      icon: Cog,
-      title: "MRO & Custom Fabrication",
-      description: "Spare part maintenance dan peralatan custom dibuat sesuai spesifikasi.",
-      examples: "V-belt Bando/Optibelt/Gates, fabrikasi bespoke sesuai kebutuhan",
+      icon: Wrench,
+      title: "MRO & Spare Part",
+      description: "Komponen maintenance sesuai part number dan annual usage site.",
+      examples: "V-belt & timing belt Bando, Optibelt, Gates; alat ukur Martindale",
+    },
+    {
+      icon: HardHat,
+      title: "Mining & Site Support",
+      description: "Kebutuhan operasional site tambang, dari pengeboran sampai utilitas.",
+      examples: "Drilling support Dancon, chemical & water treatment, baterai industri Nipress",
+    },
+    {
+      icon: Factory,
+      title: "Custom Fabrication",
+      description: "Peralatan custom dirancang dan dibuat sesuai spesifikasi kebutuhan site.",
+      examples: "Fabrikasi bespoke, contoh: custom cable winder",
     },
   ] satisfies SupplyCategory[],
   stepsTitle: "Cara Kerja Pengadaan",
@@ -183,8 +197,12 @@ export const supplyPage = {
     "Gates",
     "Bando",
     "Phoenix Contact",
+    "Nipress",
+    "Martindale",
   ],
   brandsLabel: "Brand yang pernah kami pasok:",
+  sourcingNote:
+    "Didukung jaringan supplier internasional (Amerika Serikat, Inggris, Singapura) dan pemasok domestik.",
   ctaTitle: "Punya SR atau daftar kebutuhan barang?",
   ctaSubtitle:
     "Kirimkan detailnya, tim pengadaan kami balas dengan penawaran sesuai spesifikasi.",

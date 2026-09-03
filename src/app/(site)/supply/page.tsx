@@ -63,7 +63,7 @@ export default function SupplyPage() {
             {supplyPage.categoriesTitle}
           </h2>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {supplyPage.categories.map((category, index) => (
             <Reveal key={category.title} delay={index * 0.06} className="h-full">
               <article className="flex h-full flex-col rounded-2xl border border-line bg-white p-6">
@@ -95,6 +95,7 @@ export default function SupplyPage() {
                 </li>
               ))}
             </ul>
+            <p className="mx-auto mt-4 max-w-xl text-sm text-muted">{supplyPage.sourcingNote}</p>
           </div>
         </Reveal>
       </Section>
