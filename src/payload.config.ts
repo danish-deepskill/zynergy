@@ -28,7 +28,12 @@ export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || "",
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URI,
+      // DATABASE_URL/POSTGRES_URL are injected by the Neon marketplace
+      // integration on Vercel; DATABASE_URI wins for local/manual setups.
+      connectionString:
+        process.env.DATABASE_URI ||
+        process.env.DATABASE_URL ||
+        process.env.POSTGRES_URL,
     },
   }),
   sharp,
