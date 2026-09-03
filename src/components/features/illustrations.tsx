@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 /**
- * CSS-only skeleton thumbnails — a mini wireframe of each feature, same
+ * CSS-only skeleton thumbnails: a mini wireframe of each feature, same
  * technique as the hero browser mockup. Add a feature in features.ts?
  * Add its sketch here (missing entries fall back to an icon tile).
  */

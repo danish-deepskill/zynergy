@@ -1,4 +1,4 @@
-/* Payload admin root layout — standard @payloadcms/next scaffold. */
+/* Payload admin root layout, standard @payloadcms/next scaffold. */
 import config from "@payload-config";
 import "@payloadcms/next/css";
 import type { ServerFunctionClient } from "payload";

@@ -63,7 +63,7 @@ export function CekQuiz({ onApply, onSkip }: CekQuizProps) {
             1 menit untuk tahu di mana bisnis Anda bocor.
           </p>
           <p className="mt-2 text-sm text-muted">
-            {quizQuestions.length} pertanyaan singkat, jawab jujur saja — hasilnya langsung
+            {quizQuestions.length} pertanyaan singkat, jawab jujur saja, hasilnya langsung
             jadi rekomendasi fitur.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">

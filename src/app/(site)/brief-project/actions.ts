@@ -33,7 +33,7 @@ export async function submitBrief(
   formData: FormData,
 ): Promise<BriefFormState> {
   try {
-    // Honeypot: bots fill the hidden field — pretend success, store nothing.
+    // Honeypot: bots fill the hidden field, pretend success, store nothing.
     if (String(formData.get("website") ?? "").length > 0) {
       return { status: "success" };
     }

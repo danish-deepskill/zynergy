@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { CtaLink } from "@/components/ui/CtaLink";
 import { Reveal } from "@/components/ui/Reveal";
 
-/** Slim banner pointing to the /racik-fitur tool — the full picker lives there. */
+/** Slim banner pointing to the /racik-fitur tool, the full picker lives there. */
 export function RacikTeaser() {
   return (
     <Section id="fitur" className="py-14 sm:py-16">

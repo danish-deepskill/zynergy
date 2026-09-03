@@ -1,7 +1,7 @@
 import { useId } from "react";
 import { cn } from "@/lib/cn";
 
-/** Logo mark — same artwork as the favicon (src/app/icon.svg). */
+/** Logo mark, same artwork as the favicon (src/app/icon.svg). */
 export function BrandMark({ className }: { className?: string }) {
   const gradientId = useId();
   return (

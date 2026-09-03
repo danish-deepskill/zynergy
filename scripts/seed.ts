@@ -1,8 +1,8 @@
 /**
  * Dev seed: admin user + sample content, so a fresh local setup has something
- * to look at. Idempotent — safe to run repeatedly. Run: pnpm seed
+ * to look at. Idempotent, safe to run repeatedly. Run: pnpm seed
  *
- * The dev login is dev@zynergy.local / zynergy-dev-only — LOCAL USE ONLY.
+ * The dev login is dev@zynergy.local / zynergy-dev-only, LOCAL USE ONLY.
  * On production the admin panel asks to create the first user on first visit.
  */
 import { getPayload } from "payload";
@@ -77,7 +77,7 @@ if (existingPosts.totalDocs === 0) {
       title: "Kenapa Bisnis Anda Butuh Website di 2026",
       slug: "kenapa-bisnis-anda-butuh-website",
       excerpt:
-        "Media sosial saja tidak cukup. Ini alasan website masih jadi fondasi kepercayaan pelanggan — dan kenapa sekarang waktu terbaik untuk memulai.",
+        "Media sosial saja tidak cukup. Ini alasan website masih jadi fondasi kepercayaan pelanggan, dan kenapa sekarang waktu terbaik untuk memulai.",
       content: richText([
         paragraph(
           "Banyak pemilik usaha merasa cukup dengan Instagram atau marketplace. Sampai suatu hari akun kena batasi, algoritma berubah, atau calon pelanggan bertanya: “websitenya ada?”",
@@ -88,7 +88,7 @@ if (existingPosts.totalDocs === 0) {
         ),
         heading("Dipercaya calon pelanggan"),
         paragraph(
-          "Riset menunjukkan mayoritas konsumen mengecek keberadaan online sebelum membeli. Website profesional dengan domain sendiri menaikkan kepercayaan secara instan — apalagi untuk transaksi bernilai besar.",
+          "Riset menunjukkan mayoritas konsumen mengecek keberadaan online sebelum membeli. Website profesional dengan domain sendiri menaikkan kepercayaan secara instan, apalagi untuk transaksi bernilai besar.",
         ),
         paragraph(
           "Zynergy membantu UMKM dan bisnis lokal punya website profesional tanpa ribet. Konsultasikan kebutuhan Anda, gratis.",

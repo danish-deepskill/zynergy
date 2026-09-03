@@ -1,4 +1,4 @@
-/* Payload admin catch-all — standard @payloadcms/next scaffold. */
+/* Payload admin catch-all, standard @payloadcms/next scaffold. */
 import type { Metadata } from "next";
 import config from "@payload-config";
 import { generatePageMetadata, RootPage } from "@payloadcms/next/views";

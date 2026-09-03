@@ -14,7 +14,7 @@ export const siteConfig = {
   url: "https://zynergy.co.id",
   tagline: "Jasa pembuatan website profesional untuk UMKM, personal brand, dan bisnis lokal.",
   description:
-    "Zynergy membangun website profesional yang cepat, mobile-friendly, dan siap iklan — membantu bisnis Anda dipercaya pelanggan dan mendapatkan lebih banyak leads via WhatsApp.",
+    "Zynergy membangun website profesional yang cepat, mobile-friendly, dan siap iklan, membantu bisnis Anda dipercaya pelanggan dan mendapatkan lebih banyak leads via WhatsApp.",
 
   // TODO(launch): ganti dengan nomor WhatsApp bisnis asli (format internasional tanpa "+").
   whatsappNumber: "6281234567890",

@@ -1,4 +1,4 @@
-/* Payload REST API — standard @payloadcms/next scaffold. */
+/* Payload REST API, standard @payloadcms/next scaffold. */
 import config from "@payload-config";
 import {
   REST_DELETE,

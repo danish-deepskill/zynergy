@@ -1,4 +1,4 @@
-# Zynergy — zynergy.co.id
+# Zynergy, zynergy.co.id
 
 Website jasa pembuatan website profesional. Landing page + CMS (blog,
 portofolio, form brief project, admin panel).
@@ -6,11 +6,11 @@ portofolio, form brief project, admin panel).
 ## Stack
 
 - **Next.js 16** (App Router) + **TypeScript**
-- **Payload CMS 3** (in-repo) + **Postgres** — konten dinamis & admin panel di `/admin`
-- **Tailwind CSS v4** — design tokens di [`src/app/(site)/globals.css`](<src/app/(site)/globals.css>) (tema "Synergy Blue")
-- **Framer Motion** — animasi reveal-on-scroll
-- **Radix UI Accordion** — FAQ
-- **lucide-react** — ikon
+- **Payload CMS 3** (in-repo) + **Postgres**, konten dinamis & admin panel di `/admin`
+- **Tailwind CSS v4**, design tokens di [`src/app/(site)/globals.css`](<src/app/(site)/globals.css>) (tema "Synergy Blue")
+- **Framer Motion**, animasi reveal-on-scroll
+- **Radix UI Accordion**, FAQ
+- **lucide-react**, ikon
 
 ## Arsitektur
 
@@ -18,7 +18,7 @@ portofolio, form brief project, admin panel).
 src/
 ├── app/
 │   ├── (site)/           # Frontend publik: landing, /blog, /portofolio, /brief-project
-│   └── (payload)/        # Admin panel (/admin) + REST API (/api) — scaffold Payload
+│   └── (payload)/        # Admin panel (/admin) + REST API (/api), scaffold Payload
 ├── collections/          # Skema Payload: Posts, Projects, Media, Leads, LeadFiles, Users
 ├── content/
 │   ├── site.ts           # ⭐ Satu sumber data bisnis: nomor WA, email, nav, sosmed
@@ -34,7 +34,7 @@ src/
 ```
 
 **Prinsip:** konten terpisah dari presentasi. Copy statis di `src/content/`,
-konten dinamis (artikel, portofolio, leads) di CMS — edit via `/admin`.
+konten dinamis (artikel, portofolio, leads) di CMS, edit via `/admin`.
 
 ## Menjalankan (lokal)
 
@@ -44,14 +44,14 @@ pnpm install
 cp .env.example .env.local  # isi PAYLOAD_SECRET (openssl rand -hex 32)
 pnpm payload migrate      # terapkan skema database
 pnpm seed                 # admin dev (dev@zynergy.local) + konten contoh
-pnpm dev                  # http://localhost:3000 — admin di /admin
+pnpm dev                  # http://localhost:3000, admin di /admin
 pnpm build && pnpm lint
 ```
 
 Ubah skema collection? Jalankan `pnpm payload migrate:create <nama>` lalu
 commit file migrasinya, dan `pnpm generate:types`.
 
-## Sebelum launch — cari `TODO(launch)` di src/content/
+## Sebelum launch, cari `TODO(launch)` di src/content/
 
 - [ ] Ganti `whatsappNumber` placeholder dengan nomor bisnis asli
 - [ ] Finalisasi harga & benefit paket
@@ -64,6 +64,6 @@ commit file migrasinya, dan `pnpm generate:types`.
 
 ## Roadmap
 
-- **Phase 2:** Payload CMS (in-repo) + Neon Postgres — blog, portofolio dinamis,
+- **Phase 2:** Payload CMS (in-repo) + Neon Postgres, blog, portofolio dinamis,
   form brief project dengan upload file
 - **Phase 3:** Area login klien (Payload auth)

@@ -2,7 +2,7 @@ import type { CollectionConfig } from "payload";
 import { briefUpload, budgets, businessTypes, deadlines, features } from "@/content/brief";
 
 /**
- * Submissions from the /brief-project form. Not publicly writable —
+ * Submissions from the /brief-project form. Not publicly writable;
  * the form's server action creates these via the Local API.
  */
 export const Leads: CollectionConfig = {

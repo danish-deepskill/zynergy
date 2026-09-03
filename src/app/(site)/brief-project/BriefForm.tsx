@@ -41,7 +41,7 @@ export function BriefForm() {
       className="rounded-2xl border border-line bg-white p-6 sm:p-10"
       aria-describedby={state.status === "error" ? "form-error" : undefined}
     >
-      {/* Honeypot — hidden from humans, bots fill it. */}
+      {/* Honeypot: hidden from humans, bots fill it. */}
       <input
         type="text"
         name="website"
@@ -176,7 +176,7 @@ export function BriefForm() {
           className="block w-full text-sm text-muted file:mr-4 file:rounded-lg file:border-0 file:bg-primary-soft file:px-4 file:py-2.5 file:text-sm file:font-semibold file:text-primary-dark hover:file:bg-primary/10"
         />
         <p className="mt-1.5 text-xs text-muted">
-          Maksimal {briefUpload.maxFiles} file, {briefUpload.maxFileSizeMB}MB per file — logo,
+          Maksimal {briefUpload.maxFiles} file, {briefUpload.maxFileSizeMB}MB per file: logo,
           contoh desain, atau dokumen brief.
         </p>
       </div>

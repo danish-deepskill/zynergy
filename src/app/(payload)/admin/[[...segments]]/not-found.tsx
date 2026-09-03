@@ -1,4 +1,4 @@
-/* Payload admin not-found — standard @payloadcms/next scaffold. */
+/* Payload admin not-found, standard @payloadcms/next scaffold. */
 import type { Metadata } from "next";
 import config from "@payload-config";
 import { generatePageMetadata, NotFoundPage } from "@payloadcms/next/views";

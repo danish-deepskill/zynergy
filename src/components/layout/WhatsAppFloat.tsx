@@ -2,7 +2,7 @@ import { siteConfig } from "@/content/site";
 import { waLink } from "@/lib/wa";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
-/** Sticky WhatsApp button — the primary conversion path, always reachable. */
+/** Sticky WhatsApp button, the primary conversion path, always reachable. */
 export function WhatsAppFloat() {
   return (
     <a

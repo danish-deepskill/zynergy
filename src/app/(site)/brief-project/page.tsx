@@ -6,7 +6,7 @@ import { BriefForm } from "./BriefForm";
 export const metadata: Metadata = {
   title: "Brief Project",
   description:
-    "Ceritakan kebutuhan website Anda — tim Zynergy akan menghubungi Anda dengan rekomendasi dan penawaran terbaik.",
+    "Ceritakan kebutuhan website Anda. Tim Zynergy akan menghubungi Anda dengan rekomendasi dan penawaran terbaik.",
 };
 
 export default function BriefProjectPage() {
@@ -16,7 +16,7 @@ export default function BriefProjectPage() {
         <SectionHeading
           badge="Brief Project"
           title="Ceritakan Proyek Anda"
-          subtitle="Isi form singkat ini agar kami memahami kebutuhan Anda. Tim kami akan menghubungi Anda via WhatsApp dalam 1×24 jam kerja — gratis, tanpa komitmen."
+          subtitle="Isi form singkat ini agar kami memahami kebutuhan Anda. Tim kami akan menghubungi Anda via WhatsApp dalam 1×24 jam kerja. Gratis, tanpa komitmen."
         />
         <div className="mx-auto max-w-3xl">
           <BriefForm />

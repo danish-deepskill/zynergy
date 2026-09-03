@@ -36,7 +36,7 @@ export type BusinessSegment =
   | "company-profile";
 
 export interface WebFeature {
-  /** Stable id — used in the WhatsApp message and future lead data. */
+  /** Stable id, used in the WhatsApp message and future lead data. */
   value: string;
   title: string;
   description: string;
@@ -50,7 +50,7 @@ export const featuresSection = {
   badge: "Racik Fitur",
   title: "Susun Website Impian Anda",
   subtitle:
-    "Pilih fitur yang bisnis Anda butuhkan, lalu kirim daftarnya via WhatsApp — tim kami balas dengan rekomendasi paketnya. Gratis, tanpa komitmen.",
+    "Pilih fitur yang bisnis Anda butuhkan, lalu kirim daftarnya via WhatsApp. Tim kami balas dengan rekomendasi paketnya. Gratis, tanpa komitmen.",
   presetLabel: "Bingung mulai dari mana? Pilih jenis usaha Anda:",
   footerNote: "Butuh fitur yang tidak ada di daftar?",
 } as const;
@@ -228,7 +228,7 @@ export const featureCatalog: WebFeature[] = [
   },
 ];
 
-/** Baseline yang tidak perlu dipilih — selling point di bawah daftar fitur. */
+/** Baseline yang tidak perlu dipilih, selling point di bawah daftar fitur. */
 export const includedInEveryPackage = {
   label: "Sudah termasuk di semua paket:",
   items: [

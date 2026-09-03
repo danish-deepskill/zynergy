@@ -1,5 +1,5 @@
 /**
- * Options for the brief-project lead form — shared by the Leads collection
+ * Options for the brief-project lead form, shared by the Leads collection
  * (admin panel labels) and the public form UI.
  */
 

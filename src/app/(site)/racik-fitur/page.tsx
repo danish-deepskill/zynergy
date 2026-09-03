@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Cek & Racik Fitur Website",
   description:
-    "Cek dalam 1 menit apakah bisnis Anda butuh website, lalu racik fitur yang dibutuhkan — kirim hasilnya langsung via WhatsApp. Gratis, tanpa komitmen.",
+    "Cek dalam 1 menit apakah bisnis Anda butuh website, lalu racik fitur yang dibutuhkan. Kirim hasilnya langsung via WhatsApp. Gratis, tanpa komitmen.",
 };
 
 interface RacikFiturPageProps {

@@ -20,7 +20,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     meta: {
-      titleSuffix: ` — ${siteConfig.name} Admin`,
+      titleSuffix: ` | ${siteConfig.name} Admin`,
     },
   },
   collections: [Posts, Projects, Media, Leads, LeadFiles, Users],

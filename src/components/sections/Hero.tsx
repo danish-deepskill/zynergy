@@ -50,7 +50,7 @@ export function Hero() {
           </ul>
         </Reveal>
 
-        {/* Mock jendela browser — placeholder visual sampai ada screenshot proyek asli */}
+        {/* Mock jendela browser, placeholder visual sampai ada screenshot proyek asli */}
         <Reveal delay={0.15} className="relative hidden lg:block">
           <div className="rounded-2xl border border-line bg-white shadow-2xl shadow-ink/10">
             <div className="flex items-center gap-1.5 border-b border-line px-4 py-3">

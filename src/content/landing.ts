@@ -38,7 +38,7 @@ export interface ServiceCard extends IconCard {
 export interface PricingTier {
   name: string;
   description: string;
-  /** Angka saja, tanpa "Rp" — dirender terpisah. */
+  /** Angka saja, tanpa "Rp", dirender terpisah. */
   price: string;
   period: string;
   highlighted: boolean;
@@ -77,7 +77,7 @@ export const hero = {
   titleHighlight: "Bekerja 24/7",
   titleTail: "untuk Bisnis Anda",
   subtitle:
-    "Zynergy membantu UMKM dan bisnis lokal tampil kredibel di internet — website cepat, mobile-friendly, siap iklan Meta & Google, dan terhubung langsung ke WhatsApp Anda.",
+    "Zynergy membantu UMKM dan bisnis lokal tampil kredibel di internet: website cepat, mobile-friendly, siap iklan Meta & Google, dan terhubung langsung ke WhatsApp Anda.",
   trustPoints: [
     "Tanpa biaya tersembunyi",
     "Online dalam hitungan hari",
@@ -97,7 +97,7 @@ export const problems = {
   badge: "Masalah yang Sering Terjadi",
   title: "Bisnis Bagus, Tapi Sulit Dipercaya Calon Pelanggan?",
   subtitle:
-    "Tanpa kehadiran online yang profesional, bisnis Anda kehilangan peluang setiap hari — bahkan tanpa Anda sadari.",
+    "Tanpa kehadiran online yang profesional, bisnis Anda kehilangan peluang setiap hari, bahkan tanpa Anda sadari.",
   cards: [
     {
       icon: SearchX,
@@ -115,13 +115,13 @@ export const problems = {
       icon: MessagesSquare,
       title: "Menjawab Chat Satu per Satu",
       description:
-        "Pertanyaan yang sama diulang setiap hari — harga, katalog, alamat. Waktu Anda habis untuk hal repetitif.",
+        "Pertanyaan yang sama diulang setiap hari: harga, katalog, alamat. Waktu Anda habis untuk hal repetitif.",
     },
     {
       icon: ShieldCheck,
       title: "Kredibilitas Diragukan",
       description:
-        "Calon klien membandingkan Anda dengan kompetitor yang punya website rapi — dan memilih yang terlihat lebih meyakinkan.",
+        "Calon klien membandingkan Anda dengan kompetitor yang punya website rapi, dan memilih yang terlihat lebih meyakinkan.",
     },
     {
       icon: Waves,
@@ -192,7 +192,7 @@ export const services = {
 
 export const whyUs = {
   badge: "Kenapa Zynergy",
-  title: "Bukan Sekadar Website — Mesin Kepercayaan untuk Bisnis Anda",
+  title: "Bukan Sekadar Website: Mesin Kepercayaan untuk Bisnis Anda",
   subtitle:
     "Kami fokus pada hasil: website yang cepat, mudah ditemukan, dan mengubah pengunjung menjadi pelanggan.",
   cards: [
@@ -204,7 +204,7 @@ export const whyUs = {
     {
       icon: Smartphone,
       title: "Mobile-First",
-      description: "Tampil sempurna di HP — tempat mayoritas pelanggan Anda berada.",
+      description: "Tampil sempurna di HP, tempat mayoritas pelanggan Anda berada.",
     },
     {
       icon: MessagesSquare,
@@ -219,12 +219,12 @@ export const whyUs = {
     {
       icon: ShieldCheck,
       title: "Aman & Terpercaya",
-      description: "SSL/HTTPS aktif — data terenkripsi dan dipercaya browser & Google.",
+      description: "SSL/HTTPS aktif: data terenkripsi dan dipercaya browser & Google.",
     },
     {
       icon: Wrench,
       title: "Maintenance Termasuk",
-      description: "Website dirawat tim kami selama berlangganan — tanpa biaya tambahan.",
+      description: "Website dirawat tim kami selama berlangganan, tanpa biaya tambahan.",
     },
     {
       icon: Search,
@@ -243,7 +243,7 @@ export const pricing = {
   badge: "Paket Harga",
   title: "Investasi yang Sesuai Skala Bisnis Anda",
   subtitle:
-    "Harga transparan per tahun — sudah termasuk domain, hosting, SSL, dan maintenance. Tanpa biaya kejutan.",
+    "Harga transparan per tahun, sudah termasuk domain, hosting, SSL, dan maintenance. Tanpa biaya kejutan.",
   // TODO(launch): finalisasi harga & benefit sebelum publikasi.
   tiers: [
     {
@@ -265,7 +265,7 @@ export const pricing = {
     },
     {
       name: "Business",
-      description: "Paket terpopuler — landing page lengkap siap menerima leads.",
+      description: "Paket terpopuler: landing page lengkap siap menerima leads.",
       price: "950K",
       period: "/ tahun",
       highlighted: true,
@@ -307,7 +307,7 @@ export const processSection = {
   badge: "Proses Kerja",
   title: "6 Langkah Sampai Website Anda Online",
   subtitle:
-    "Proses transparan dan terarah — Anda selalu tahu progres website di setiap tahap.",
+    "Proses transparan dan terarah. Anda selalu tahu progres website di setiap tahap.",
   steps: [
     {
       title: "Konsultasi & Brief",
@@ -315,7 +315,7 @@ export const processSection = {
     },
     {
       title: "Rekomendasi Paket",
-      description: "Kami sarankan paket paling sesuai kebutuhan dan budget — tanpa memaksa.",
+      description: "Kami sarankan paket paling sesuai kebutuhan dan budget, tanpa memaksa.",
     },
     {
       title: "Pengumpulan Materi",
@@ -415,7 +415,7 @@ export const faq = {
     {
       question: "Domain dan hosting benar-benar gratis?",
       answer:
-        "Ya, setiap paket sudah termasuk domain dan hosting untuk tahun pertama serta perpanjangannya selama berlangganan — sesuai jenis domain pada masing-masing paket.",
+        "Ya, setiap paket sudah termasuk domain dan hosting untuk tahun pertama serta perpanjangannya selama berlangganan, sesuai jenis domain pada masing-masing paket.",
     },
     {
       question: "Apakah website terhubung ke WhatsApp saya?",
@@ -440,7 +440,7 @@ export const faq = {
     {
       question: "Apakah melayani klien dari luar kota?",
       answer:
-        "Bisa! Seluruh proses berjalan online via WhatsApp — dari konsultasi, pengiriman materi, hingga revisi. Kami melayani seluruh Indonesia.",
+        "Bisa! Seluruh proses berjalan online via WhatsApp: dari konsultasi, pengiriman materi, hingga revisi. Kami melayani seluruh Indonesia.",
     },
   ] satisfies FaqItem[],
 };
@@ -449,7 +449,7 @@ export const finalCta = {
   badge: "Mulai Sekarang",
   title: "Siap Punya Website yang Mendatangkan Pelanggan?",
   subtitle:
-    "Konsultasikan kebutuhan Anda — gratis, tanpa kewajiban. Kami bantu rekomendasikan solusi terbaik untuk bisnis Anda.",
+    "Konsultasikan kebutuhan Anda. Gratis, tanpa kewajiban. Kami bantu rekomendasikan solusi terbaik untuk bisnis Anda.",
   points: [
     "Konsultasi gratis via WhatsApp",
     "Rekomendasi paket sesuai budget",

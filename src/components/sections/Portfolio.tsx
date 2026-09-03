@@ -12,7 +12,7 @@ export function Portfolio() {
         {portfolio.items.map((item, index) => (
           <Reveal key={item.title} delay={index * 0.07}>
             <article className="group h-full overflow-hidden rounded-2xl border border-line bg-white transition-shadow hover:shadow-lg">
-              {/* Placeholder thumbnail — ganti dengan screenshot proyek asli */}
+              {/* Placeholder thumbnail, ganti dengan screenshot proyek asli */}
               <div
                 className={cn(
                   "relative flex h-44 items-end bg-gradient-to-br p-5",
