@@ -33,11 +33,14 @@ export const siteConfig = {
       "Halo Zynergy! Saya ingin konsultasi gratis mengenai pembuatan website. Bisa dibantu?",
     package: (packageName: string) =>
       `Halo Zynergy! Saya tertarik dengan paket ${packageName}. Mohon info lebih lanjut ya.`,
+    features: (featureList: string) =>
+      `Halo Zynergy! Saya ingin website dengan fitur: ${featureList}. Bisa dibantu rekomendasinya?`,
   },
 
   nav: [
     { label: "Beranda", href: "/#beranda" },
     { label: "Layanan", href: "/#layanan" },
+    { label: "Fitur", href: "/#fitur" },
     { label: "Paket Harga", href: "/#paket" },
     { label: "Proses", href: "/#proses" },
     { label: "Portofolio", href: "/portofolio" },

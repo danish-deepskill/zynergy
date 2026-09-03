@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function WhyUs() {
   return (
-    <Section id="keunggulan" tone="soft">
+    <Section id="keunggulan">
       <SectionHeading badge={whyUs.badge} title={whyUs.title} subtitle={whyUs.subtitle} />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {whyUs.cards.map((card, index) => (
