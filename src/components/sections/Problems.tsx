@@ -7,7 +7,7 @@ export function Problems() {
   return (
     <Section id="masalah" tone="soft">
       <SectionHeading badge={problems.badge} title={problems.title} subtitle={problems.subtitle} />
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {problems.cards.map((card, index) => (
           <Reveal key={card.title} delay={index * 0.05}>
             <article className="h-full rounded-2xl border border-line bg-white p-6 transition-shadow hover:shadow-md">

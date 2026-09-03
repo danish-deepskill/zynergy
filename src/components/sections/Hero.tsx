@@ -20,7 +20,7 @@ export function Hero() {
             {hero.badge}
           </span>
 
-          <h1 className="mt-5 text-4xl font-extrabold leading-[1.12] tracking-tight text-ink sm:text-5xl">
+          <h1 className="mt-5 text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-6xl">
             {hero.titleLead} <span className="text-primary">{hero.titleHighlight}</span>{" "}
             {hero.titleTail}
           </h1>

@@ -77,7 +77,12 @@ export function Footer() {
       </div>
 
       <div className="mx-auto mt-12 w-full max-w-6xl space-y-1.5 border-t border-line pt-6 text-center text-xs text-muted">
-        <p>{siteConfig.endorsement}</p>
+        <p>
+          {siteConfig.endorsement}{" "}
+          <Link href="/tentang" className="font-semibold text-primary hover:underline">
+            Tentang kami
+          </Link>
+        </p>
         <p>
           © {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.
         </p>

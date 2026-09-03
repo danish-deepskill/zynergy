@@ -4,17 +4,12 @@ import {
   Building2,
   Gauge,
   GraduationCap,
-  LayoutTemplate,
   type LucideIcon,
   MapPin,
   MessagesSquare,
-  Palette,
-  Search,
   SearchX,
   ShieldCheck,
-  Smartphone,
   Store,
-  TrendingDown,
   UserRound,
   Waves,
   Wrench,
@@ -72,16 +67,16 @@ export interface FaqItem {
 }
 
 export const hero = {
-  badge: "Partner Digital Bisnis Anda",
-  titleLead: "Website Profesional yang",
-  titleHighlight: "Bekerja 24/7",
-  titleTail: "untuk Bisnis Anda",
+  badge: "Jasa Pembuatan Website",
+  titleLead: "Websitenya Kami Urus.",
+  titleHighlight: "Anda Fokus Jualan.",
+  titleTail: "",
   subtitle:
-    "Zynergy membantu UMKM dan bisnis lokal tampil kredibel di internet: website cepat, mobile-friendly, siap iklan Meta & Google, dan terhubung langsung ke WhatsApp Anda.",
+    "Website profesional untuk UMKM dan bisnis lokal: cepat, terhubung WhatsApp, siap iklan. Domain, hosting, sampai perawatan, semua kami tangani.",
   trustPoints: [
-    "Tanpa biaya tersembunyi",
     "Online dalam hitungan hari",
-    "Gratis konsultasi & revisi sesuai brief",
+    "Tanpa biaya tersembunyi",
+    "Maintenance termasuk",
   ],
 };
 
@@ -94,46 +89,30 @@ export const stats: Stat[] = [
 ];
 
 export const problems = {
-  badge: "Masalah yang Sering Terjadi",
-  title: "Bisnis Bagus, Tapi Sulit Dipercaya Calon Pelanggan?",
+  badge: "Sering Kejadian",
+  title: "Bisnis Bagus, Tapi Susah Dipercaya?",
   subtitle:
-    "Tanpa kehadiran online yang profesional, bisnis Anda kehilangan peluang setiap hari, bahkan tanpa Anda sadari.",
+    "Tanpa rumah digital yang jelas, peluang bocor setiap hari tanpa Anda sadari.",
   cards: [
     {
       icon: SearchX,
-      title: "Sulit Ditemukan di Google",
-      description:
-        "Calon pelanggan mencari produk atau jasa Anda, tapi yang muncul justru kompetitor. Peluang hilang sebelum sempat ditawar.",
-    },
-    {
-      icon: TrendingDown,
-      title: "Iklan Boros, Hasil Minim",
-      description:
-        "Trafik iklan dikirim langsung ke chat tanpa landing page. Biaya naik terus, tapi konversi tidak sebanding.",
+      title: "Tak Terlihat di Google",
+      description: "Calon pelanggan mencari, yang muncul justru kompetitor.",
     },
     {
       icon: MessagesSquare,
-      title: "Menjawab Chat Satu per Satu",
-      description:
-        "Pertanyaan yang sama diulang setiap hari: harga, katalog, alamat. Waktu Anda habis untuk hal repetitif.",
+      title: "Balas Chat Itu-Itu Saja",
+      description: "Harga, alamat, jam buka. Setiap hari, satu per satu.",
     },
     {
       icon: ShieldCheck,
-      title: "Kredibilitas Diragukan",
-      description:
-        "Calon klien membandingkan Anda dengan kompetitor yang punya website rapi, dan memilih yang terlihat lebih meyakinkan.",
+      title: "Diragukan Calon Pembeli",
+      description: "Tanpa website resmi, bisnis terlihat kurang meyakinkan.",
     },
     {
       icon: Waves,
-      title: "Promosi Cepat Tenggelam",
-      description:
-        "Promo hanya lewat status WhatsApp dan story Instagram. Dalam 24 jam hilang, sulit diakses kembali oleh pembeli.",
-    },
-    {
-      icon: LayoutTemplate,
-      title: "Informasi Bisnis Terpencar",
-      description:
-        "Katalog, harga, testimoni, dan kontak tersebar di banyak tempat. Calon pembeli bingung, lalu batal membeli.",
+      title: "Promo Tenggelam 24 Jam",
+      description: "Story hilang sehari. Promo di website tinggal selamanya.",
     },
   ] satisfies IconCard[],
   closing: "Saatnya punya satu rumah digital yang bekerja untuk Anda 24/7.",
@@ -142,49 +121,42 @@ export const problems = {
 export const services = {
   badge: "Layanan Zynergy",
   title: "Solusi Website untuk Setiap Jenis Bisnis",
-  subtitle:
-    "Setiap bisnis punya kebutuhan berbeda. Kami rancang website yang sesuai dengan cara Anda menjual.",
+  subtitle: "Kami rancang sesuai cara Anda menjual.",
   cards: [
     {
       icon: Store,
       title: "UMKM & Toko Online",
-      description:
-        "Katalog produk dengan tombol pesan langsung ke WhatsApp. Cocok untuk kuliner, fashion, dan produk kreatif.",
+      description: "Katalog produk dengan tombol pesan langsung ke WhatsApp.",
       features: ["Katalog produk", "Order via WhatsApp", "Info promo terpusat"],
     },
     {
       icon: UserRound,
       title: "Personal Branding",
-      description:
-        "Profil profesional untuk konsultan, trainer, dan kreator agar lebih mudah dipercaya klien baru.",
+      description: "Profil profesional agar konsultan, trainer, dan kreator mudah dipercaya.",
       features: ["Profil & portofolio", "Testimoni klien", "Booking layanan"],
     },
     {
       icon: MapPin,
       title: "Bisnis Lokal",
-      description:
-        "Website untuk resto, klinik, salon, dan jasa servis agar mudah ditemukan pelanggan di area Anda.",
+      description: "Agar resto, klinik, dan salon mudah ditemukan pelanggan sekitar.",
       features: ["Integrasi Google Maps", "Daftar menu / layanan", "Reservasi online"],
     },
     {
       icon: GraduationCap,
       title: "Sekolah & Lembaga",
-      description:
-        "Profil institusi, informasi pendaftaran, berita, dan agenda kegiatan dalam satu website resmi.",
+      description: "Profil institusi, pendaftaran, dan agenda dalam satu website resmi.",
       features: ["Info pendaftaran (PPDB)", "Profil institusi", "Berita & agenda"],
     },
     {
       icon: Building2,
       title: "Company Profile",
-      description:
-        "Website perusahaan yang menampilkan visi, layanan, tim, dan portofolio secara profesional.",
+      description: "Visi, layanan, tim, dan portofolio perusahaan tampil profesional.",
       features: ["Profil perusahaan", "Layanan & tim", "Portofolio proyek"],
     },
     {
       icon: Briefcase,
       title: "Jasa Profesional",
-      description:
-        "Untuk dokter, pengacara, arsitek, dan agen properti yang butuh sistem booking dan kredibilitas tinggi.",
+      description: "Sistem booking dan kredibilitas untuk dokter, pengacara, arsitek.",
       features: ["Booking online", "Halaman layanan", "Konsultasi via WA"],
     },
   ] satisfies ServiceCard[],
@@ -192,49 +164,29 @@ export const services = {
 
 export const whyUs = {
   badge: "Kenapa Zynergy",
-  title: "Bukan Sekadar Website: Mesin Kepercayaan untuk Bisnis Anda",
+  title: "Bukan Sekadar Tampil Bagus",
   subtitle:
-    "Kami fokus pada hasil: website yang cepat, mudah ditemukan, dan mengubah pengunjung menjadi pelanggan.",
+    "Setiap website Zynergy dibangun untuk satu hal: mengubah pengunjung jadi pelanggan.",
   cards: [
-    {
-      icon: Gauge,
-      title: "Cepat & Ringan",
-      description: "Performa dioptimasi agar pengunjung betah dan konversi meningkat.",
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile-First",
-      description: "Tampil sempurna di HP, tempat mayoritas pelanggan Anda berada.",
-    },
     {
       icon: MessagesSquare,
       title: "Terhubung WhatsApp",
-      description: "Tombol chat & pesan otomatis. Leads masuk langsung ke WhatsApp Anda.",
+      description: "Setiap halaman mengarahkan pengunjung ke chat Anda.",
+    },
+    {
+      icon: Gauge,
+      title: "Cepat di Semua HP",
+      description: "Loading ringan, tampilan rapi di layar mana pun.",
     },
     {
       icon: BarChart3,
-      title: "Siap Iklan",
-      description: "Meta Pixel & Google Analytics terpasang. Iklan lebih tepat sasaran.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Aman & Terpercaya",
-      description: "SSL/HTTPS aktif: data terenkripsi dan dipercaya browser & Google.",
+      title: "Siap Iklan & SEO",
+      description: "Pixel, Analytics, dan struktur SEO terpasang sejak awal.",
     },
     {
       icon: Wrench,
-      title: "Maintenance Termasuk",
-      description: "Website dirawat tim kami selama berlangganan, tanpa biaya tambahan.",
-    },
-    {
-      icon: Search,
-      title: "SEO Dasar",
-      description: "Struktur & meta tag dioptimasi agar mudah ditemukan di pencarian.",
-    },
-    {
-      icon: Palette,
-      title: "Desain Premium",
-      description: "Tampilan modern yang memperkuat citra dan kepercayaan brand Anda.",
+      title: "Dirawat Selama Berlangganan",
+      description: "Update, backup, dan perbaikan tanpa biaya tambahan.",
     },
   ] satisfies IconCard[],
 };

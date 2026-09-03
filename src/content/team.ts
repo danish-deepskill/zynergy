@@ -1,0 +1,59 @@
+/**
+ * Team page content. TODO(launch): replace placeholder names/bios with the
+ * real six people and add photos (photo field is optional; initials-avatar
+ * renders when absent).
+ */
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  /** Extra credibility line, e.g. the advisor's own business. */
+  note?: string;
+  highlight?: boolean;
+}
+
+export const tentangSection = {
+  badge: "Tentang Kami",
+  title: "Tim Kecil, Standar Serius",
+  subtitle:
+    "Zynergy adalah unit bisnis digital & kreatif dari PT Sinergi Mitra Abadi Jaya. Enam orang, satu tujuan: membuat bisnis Anda dipercaya pelanggan.",
+  storyTitle: "Kenapa Zynergy Ada",
+  story:
+    "Kami melihat terlalu banyak bisnis bagus yang kalah bersaing hanya karena tidak terlihat meyakinkan di internet. Zynergy dibangun untuk menutup celah itu: website yang cepat dan terurus, tanpa Anda harus paham teknis. Yang membedakan kami: salah satu dari kami adalah pemilik usaha betulan, jadi setiap keputusan berangkat dari kebutuhan nyata di lapangan.",
+} as const;
+
+export const teamMembers: TeamMember[] = [
+  {
+    name: "Nama Anggota", // TODO(launch)
+    role: "Business Advisor",
+    bio: "Memastikan setiap keputusan Zynergy berangkat dari kebutuhan nyata pemilik usaha.",
+    note: "Pemilik Usaha", // TODO(launch): "Pemilik <nama usaha>"
+    highlight: true,
+  },
+  {
+    name: "Nama Anggota", // TODO(launch)
+    role: "Developer",
+    bio: "Membangun website dan aplikasi yang cepat, aman, dan mudah dirawat.",
+  },
+  {
+    name: "Nama Anggota", // TODO(launch)
+    role: "Developer",
+    bio: "Memastikan setiap fitur berjalan mulus dari HP sampai desktop.",
+  },
+  {
+    name: "Nama Anggota", // TODO(launch)
+    role: "Designer",
+    bio: "Merancang identitas visual dan tampilan yang memperkuat kepercayaan brand.",
+  },
+  {
+    name: "Nama Anggota", // TODO(launch)
+    role: "Marketing & Sales",
+    bio: "Membantu klien menemukan solusi yang pas, tanpa jargon teknis.",
+  },
+  {
+    name: "Nama Anggota", // TODO(launch)
+    role: "Marketing & Sales",
+    bio: "Menjaga komunikasi tetap responsif, dari konsultasi sampai purnajual.",
+  },
+];

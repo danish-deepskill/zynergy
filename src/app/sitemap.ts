@@ -12,6 +12,7 @@ const staticRoutes: { path: string; priority: number }[] = [
   { path: "/desain", priority: 0.7 },
   { path: "/pengadaan", priority: 0.7 },
   { path: "/portofolio", priority: 0.7 },
+  { path: "/tentang", priority: 0.5 },
   { path: "/blog", priority: 0.6 },
 ];
 
