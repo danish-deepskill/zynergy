@@ -39,10 +39,10 @@ export const businessLines: BusinessLine[] = [
   {
     value: "technology",
     name: "Zynergy Technology",
-    tagline: "Website, Aplikasi & Mobile",
+    tagline: "Website, App & Mobile",
     description:
       "Website profesional untuk UMKM dan bisnis lokal, lengkap dengan CMS, blog, dan integrasi WhatsApp.",
-    points: ["Website bisnis & UMKM", "Aplikasi web & mobile", "CMS + admin panel"],
+    points: ["Website bisnis & UMKM", "Web app & mobile app", "CMS + admin panel"],
     href: "/technology",
     cta: "Jelajahi Technology",
     icon: MonitorSmartphone,
@@ -51,10 +51,10 @@ export const businessLines: BusinessLine[] = [
   {
     value: "creative",
     name: "Zynergy Creative",
-    tagline: "Grafis, Branding & Animasi",
+    tagline: "Branding, Design & Motion",
     description:
       "Identitas visual yang membuat bisnis Anda dikenali: logo, konten sosial media, sampai animasi.",
-    points: ["Logo & identitas brand", "Konten sosial media", "Animasi & motion graphics"],
+    points: ["Logo & brand identity", "Konten sosial media", "Animasi & motion graphics"],
     href: "/creative",
     cta: "Jelajahi Creative",
     icon: Palette,
@@ -62,10 +62,10 @@ export const businessLines: BusinessLine[] = [
   {
     value: "marketing",
     name: "Zynergy Marketing",
-    tagline: "SEO, Iklan & Sosial Media",
+    tagline: "SEO, Ads & Social Media",
     description:
       "Mendatangkan pelanggan lewat kanal digital: pencarian Google, iklan berbayar, dan konten sosial media.",
-    points: ["SEO & konten", "Iklan Meta & Google", "Manajemen sosial media"],
+    points: ["SEO & content", "Meta & Google Ads", "Social media management"],
     href: "#",
     cta: "",
     icon: Megaphone,

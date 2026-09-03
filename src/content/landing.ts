@@ -72,7 +72,7 @@ export const hero = {
   titleHighlight: "Anda Fokus Jualan.",
   titleTail: "",
   subtitle:
-    "Website profesional untuk UMKM dan bisnis lokal: cepat, terhubung WhatsApp, siap iklan. Domain, hosting, sampai perawatan, semua kami tangani.",
+    "Website profesional untuk UMKM dan bisnis lokal: cepat, terhubung WhatsApp, siap iklan. Domain, hosting, sampai maintenance, semua kami tangani.",
   trustPoints: [
     "Online dalam hitungan hari",
     "Tanpa biaya tersembunyi",
@@ -185,8 +185,8 @@ export const whyUs = {
     },
     {
       icon: Wrench,
-      title: "Dirawat Selama Berlangganan",
-      description: "Update, backup, dan perbaikan tanpa biaya tambahan.",
+      title: "Maintenance Termasuk",
+      description: "Update, backup, dan perbaikan selama berlangganan, tanpa biaya tambahan.",
     },
   ] satisfies IconCard[],
 };
