@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Mail } from "lucide-react";
 import { supplyPage } from "@/content/company";
 import { siteConfig } from "@/content/site";
@@ -52,8 +53,31 @@ export default function SupplyPage() {
         </section>
       </div>
 
+      {/* Klien */}
+      <Section className="py-12 sm:py-14">
+        <Reveal>
+          <p className="text-center text-xs font-bold uppercase tracking-[0.15em] text-muted">
+            {supplyPage.clientsLabel}
+          </p>
+          <ul className="mx-auto mt-7 flex max-w-5xl flex-wrap items-center justify-center gap-x-10 gap-y-6">
+            {supplyPage.clients.map((client) => (
+              <li key={client.name}>
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  title={client.name}
+                  width={client.width}
+                  height={client.height}
+                  className="h-9 w-auto max-w-40 object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 sm:h-10 sm:max-w-48"
+                />
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </Section>
+
       {/* Kategori supply */}
-      <Section>
+      <Section tone="soft">
         <div className="mx-auto mb-12 flex max-w-2xl flex-col items-center gap-4 text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-amber-soft px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-amber-dark">
             <span className="size-1.5 rounded-full bg-amber" aria-hidden />
@@ -101,7 +125,7 @@ export default function SupplyPage() {
       </Section>
 
       {/* Cara kerja */}
-      <Section tone="soft" className="py-16 sm:py-20">
+      <Section className="py-16 sm:py-20">
         <h2 className="text-center text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
           {supplyPage.stepsTitle}
         </h2>

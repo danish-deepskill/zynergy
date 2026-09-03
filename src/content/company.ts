@@ -131,6 +131,17 @@ export const supplyPage = {
   subtitle:
     "Sejak 2008, PT Sinergi Mitra Abadi Jaya memasok komponen jaringan, kelistrikan, dan infrastruktur untuk industri pertambangan dan manufaktur: berbasis SR/RFQ, sesuai spesifikasi dan part number, tepat waktu.",
   chips: ["Sejak 2008", "Berbasis SR / RFQ", "Sourcing Domestik & Impor"],
+  clientsLabel: "Dipercaya oleh",
+  clients: [
+    { name: "PT Freeport Indonesia", logo: "/clients/freeport-indonesia.png", width: 213, height: 160 },
+    { name: "PT Merdeka Copper Gold", logo: "/clients/merdeka-copper-gold.png", width: 365, height: 160 },
+    { name: "PT Cogindo DayaBersama", logo: "/clients/cogindo.png", width: 466, height: 160 },
+    { name: "PT Trakindo Utama", logo: "/clients/trakindo.png", width: 400, height: 104 },
+    { name: "PT Sorikmas Mining", logo: "/clients/sorikmas-mining.png", width: 100, height: 100 },
+    { name: "PT Gunung Madu Plantations", logo: "/clients/gunung-madu.png", width: 284, height: 160 },
+    { name: "PT Trinitan Metals", logo: "/clients/trinitan-metals.png", width: 240, height: 160 },
+    { name: "Hyundai Engineering & Construction", logo: "/clients/hyundai-enc.png", width: 898, height: 160 },
+  ],
   categoriesBadge: "Kategori Supply",
   categoriesTitle: "Apa yang Kami Pasok",
   categories: [
