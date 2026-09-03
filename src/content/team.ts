@@ -20,16 +20,14 @@ export const tentangSection = {
     "Zynergy adalah unit bisnis digital & kreatif dari PT Sinergi Mitra Abadi Jaya. Enam orang, satu tujuan: membuat bisnis Anda dipercaya pelanggan.",
   storyTitle: "Kenapa Zynergy Ada",
   story:
-    "Kami melihat terlalu banyak bisnis bagus yang kalah bersaing hanya karena tidak terlihat meyakinkan di internet. Zynergy dibangun untuk menutup celah itu: website yang cepat dan terurus, tanpa Anda harus paham teknis. Yang membedakan kami: salah satu dari kami adalah pemilik usaha betulan, jadi setiap keputusan berangkat dari kebutuhan nyata di lapangan.",
+    "Kami melihat terlalu banyak bisnis bagus yang kalah bersaing hanya karena tidak terlihat meyakinkan di internet. Zynergy dibangun untuk menutup celah itu: website yang cepat dan terurus, tanpa Anda harus paham teknis.",
 } as const;
 
 export const teamMembers: TeamMember[] = [
   {
     name: "Nama Anggota", // TODO(launch)
-    role: "Business Advisor",
-    bio: "Memastikan setiap keputusan Zynergy berangkat dari kebutuhan nyata pemilik usaha.",
-    note: "Pemilik Usaha", // TODO(launch): "Pemilik <nama usaha>"
-    highlight: true,
+    role: "Lead",
+    bio: "Mengarahkan visi, kualitas, dan prioritas di setiap proyek.",
   },
   {
     name: "Nama Anggota", // TODO(launch)
@@ -38,8 +36,8 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Nama Anggota", // TODO(launch)
-    role: "Developer",
-    bio: "Memastikan setiap fitur berjalan mulus dari HP sampai desktop.",
+    role: "Marketing",
+    bio: "Membantu klien menemukan solusi yang pas, tanpa jargon teknis.",
   },
   {
     name: "Nama Anggota", // TODO(launch)
@@ -48,12 +46,12 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Nama Anggota", // TODO(launch)
-    role: "Marketing & Sales",
-    bio: "Membantu klien menemukan solusi yang pas, tanpa jargon teknis.",
+    role: "Finance",
+    bio: "Menjaga penawaran, penagihan, dan langganan berjalan rapi dan transparan.",
   },
   {
     name: "Nama Anggota", // TODO(launch)
-    role: "Marketing & Sales",
-    bio: "Menjaga komunikasi tetap responsif, dari konsultasi sampai purnajual.",
+    role: "Business",
+    bio: "Menjaga arah bisnis dan kemitraan agar layanan selalu relevan.",
   },
 ];
