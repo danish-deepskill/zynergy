@@ -22,6 +22,13 @@
   --color-navy-light: #12275c;
   --color-navy-ink: #b7c4de;
   --color-navy-accent: #7ea6f8;
+  /* Steel + amber: industrial identity, dipakai khusus halaman Supply */
+  --color-steel: #1c2530;
+  --color-steel-light: #2b3644;
+  --color-steel-ink: #aeb9c9;
+  --color-amber: #f59e0b;
+  --color-amber-dark: #b45309;
+  --color-amber-soft: #fef3c7;
 }
 
 html {

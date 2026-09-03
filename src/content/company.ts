@@ -1,10 +1,14 @@
 import {
   Boxes,
+  Cable,
+  Cog,
   type LucideIcon,
   Megaphone,
   MonitorSmartphone,
   Package,
   Palette,
+  Router,
+  Zap,
 } from "lucide-react";
 
 /**
@@ -88,9 +92,9 @@ export const businessLines: BusinessLine[] = [
     name: "Zynergy Supply",
     tagline: "Pengadaan Electrical, Industri & Mining",
     description:
-      "Lini pengadaan barang PT Sinergi Mitra Abadi Jaya: supplier kebutuhan kelistrikan, industri, dan pertambangan.",
-    points: ["Peralatan kelistrikan", "Kebutuhan industri", "Supply pertambangan"],
-    href: "/pengadaan",
+      "Lini pengadaan barang PT Sinergi Mitra Abadi Jaya sejak 2008: komponen jaringan, kelistrikan, dan infrastruktur industri.",
+    points: ["Networking & konektivitas", "Structured cabling", "Kelistrikan & MRO"],
+    href: "/supply",
     cta: "Jelajahi Supply",
     icon: Boxes,
   },
@@ -112,16 +116,77 @@ export const creativePage = {
   cta: "Konsultasi Desain via WhatsApp",
 } as const;
 
-export const pengadaanPage = {
+export interface SupplyCategory {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  examples: string;
+}
+
+export const supplyPage = {
   badge: "Pengadaan Barang",
   title: "Mitra Pengadaan untuk Kebutuhan Industri",
   subtitle:
-    "PT Sinergi Mitra Abadi Jaya melayani pengadaan barang kelistrikan, industri, dan pertambangan dengan proses yang transparan dan tepat waktu.",
-  services: [
-    "Peralatan & komponen kelistrikan",
-    "Kebutuhan operasional industri",
-    "Supply & consumable pertambangan",
-    "Sourcing berdasarkan spesifikasi tender",
+    "Sejak 2008, PT Sinergi Mitra Abadi Jaya memasok komponen jaringan, kelistrikan, dan infrastruktur untuk industri pertambangan dan manufaktur: berbasis SR/RFQ, sesuai spesifikasi dan part number, tepat waktu.",
+  chips: ["Sejak 2008", "Berbasis SR / RFQ", "Sourcing Domestik & Impor"],
+  categoriesBadge: "Kategori Supply",
+  categoriesTitle: "Apa yang Kami Pasok",
+  categories: [
+    {
+      icon: Router,
+      title: "Networking & Konektivitas",
+      description: "Komponen jaringan spesialis, termasuk modul impor yang sulit dicari.",
+      examples: "SFP & GLC transceiver, Lantronix device server, Cisco AP",
+    },
+    {
+      icon: Cable,
+      title: "Structured Cabling",
+      description: "Kabel terstruktur dan komponen fiber optic untuk infrastruktur site.",
+      examples: "Commscope CAT6A, Netviel fiber optic, Panduit, First Cable",
+    },
+    {
+      icon: Zap,
+      title: "Kelistrikan",
+      description: "Komponen instalasi listrik untuk panel dan distribusi daya.",
+      examples: "MCB Schneider, panel box, kabel N2XY/NYY, Phoenix Contact",
+    },
+    {
+      icon: Cog,
+      title: "MRO & Custom Fabrication",
+      description: "Spare part maintenance dan peralatan custom dibuat sesuai spesifikasi.",
+      examples: "V-belt Bando/Optibelt/Gates, fabrikasi bespoke sesuai kebutuhan",
+    },
+  ] satisfies SupplyCategory[],
+  stepsTitle: "Cara Kerja Pengadaan",
+  steps: [
+    {
+      title: "Terima SR / RFQ",
+      description: "Kirim service request atau daftar kebutuhan lengkap dengan spesifikasi.",
+    },
+    {
+      title: "Sourcing & Penawaran",
+      description: "Kami cari barang sesuai part number, domestik maupun impor, lalu ajukan penawaran kompetitif.",
+    },
+    {
+      title: "Pengiriman & Dokumen",
+      description: "Barang dikirim tepat waktu ke site, lengkap dengan invoice dan dokumen pendukung.",
+    },
   ],
+  brands: [
+    "Schneider Electric",
+    "Cisco",
+    "Commscope",
+    "Lantronix",
+    "Panduit",
+    "Netviel",
+    "Optibelt",
+    "Gates",
+    "Bando",
+    "Phoenix Contact",
+  ],
+  brandsLabel: "Brand yang pernah kami pasok:",
+  ctaTitle: "Punya SR atau daftar kebutuhan barang?",
+  ctaSubtitle:
+    "Kirimkan detailnya, tim pengadaan kami balas dengan penawaran sesuai spesifikasi.",
   cta: "Hubungi Tim Pengadaan",
 } as const;

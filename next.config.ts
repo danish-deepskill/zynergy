@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       { source: "/digital", destination: "/technology", permanent: true },
       { source: "/desain", destination: "/creative", permanent: true },
       { source: "/design", destination: "/creative", permanent: true },
+      { source: "/pengadaan", destination: "/supply", permanent: true },
     ];
   },
 };

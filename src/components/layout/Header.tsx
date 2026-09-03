@@ -14,8 +14,9 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  // The gateway (/) opens on the Deep Navy hero; float light text over it.
-  const onDark = pathname === "/" && !scrolled && !menuOpen;
+  // Pages that open on a dark hero (navy gateway, steel supply) get light header text.
+  const darkHeroRoutes = ["/", "/supply"];
+  const onDark = darkHeroRoutes.includes(pathname) && !scrolled && !menuOpen;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);

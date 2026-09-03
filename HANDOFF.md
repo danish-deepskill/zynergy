@@ -107,12 +107,22 @@ showing the five business lines of PT Sinergi Mitra Abadi Jaya under the
 Zynergy brand (content in `src/content/company.ts`): Zynergy Technology
 (flagship, full landing funnel at `/technology` (301s: /digital, /teknologi)), Zynergy
 Creative (`/creative`, lean page; /design and /desain 301 to it), Zynergy
-Supply (`/pengadaan`, lean page, contracts run under the PT name), and
+Supply (`/supply`; /pengadaan 301s to it; steel+amber industrial design, real categories since-2008 credibility, contracts run under the PT name), and
 Zynergy Marketing (upcoming card, no page yet), and Zynergy Products
 (upcoming card teasing the three draft products in products.ts). Gateway
 layout: agency triangle row (3 equal) over Products+Supply row (2 wide). Gateway motto follows the
 Whitebox model (user's stated inspiration): outcome headline over the
 agency triangle teknologi/desain/pemasaran.
+
+**Supply line (public-safe summary):** the PT (founded 2008) supplies
+networking, electrical, and infrastructure components to industrial
+clients via SR/RFQ-based bids, domestic and import sourcing. Categories on
+`/supply`: networking & konektivitas (SFP/GLC transceivers, Lantronix,
+Cisco), structured cabling (Commscope, Netviel, Panduit), kelistrikan
+(Schneider, Phoenix Contact), MRO & custom fabrication. NOTE: this repo is
+PUBLIC; client names, financials, vendor IDs, and deal economics live ONLY
+in Claude's private local memory, never here. Full credibility page (client
+list needs clearance, certifications, company profile PDF) awaits user.
 
 **Products plan (decided 2026-09-03, not yet built):** the Digital line
 will later carry software products (SaaS/AI tools, courses) besides jasa.
