@@ -1,4 +1,11 @@
-import { Boxes, type LucideIcon, Megaphone, MonitorSmartphone, Palette } from "lucide-react";
+import {
+  Boxes,
+  type LucideIcon,
+  Megaphone,
+  MonitorSmartphone,
+  Package,
+  Palette,
+} from "lucide-react";
 
 /**
  * Group-level content: the root page presents the three business lines of
@@ -25,7 +32,7 @@ export const companyHome = {
   eyebrow: "PT Sinergi Mitra Abadi Jaya",
   title: "Membantu Bisnis Bertumbuh lewat Teknologi, Desain, dan Pemasaran.",
   subtitle:
-    "Zynergy adalah rumah bagi empat lini bisnis PT Sinergi Mitra Abadi Jaya: digital, desain, pemasaran, dan pengadaan barang industri.",
+    "Zynergy adalah rumah bagi lima lini bisnis PT Sinergi Mitra Abadi Jaya: digital, desain, pemasaran, produk software, dan pengadaan barang industri.",
 } as const;
 
 export const businessLines: BusinessLine[] = [
@@ -62,6 +69,18 @@ export const businessLines: BusinessLine[] = [
     href: "#",
     cta: "",
     icon: Megaphone,
+    upcoming: true,
+  },
+  {
+    value: "products",
+    name: "Zynergy Products",
+    tagline: "Software Siap Pakai",
+    description:
+      "Produk software berlangganan yang lahir dari kebutuhan nyata klien kami, sedang dalam pengembangan.",
+    points: ["Asisten WhatsApp AI", "Menu digital QR + pesanan", "PPDB & pendaftaran online"],
+    href: "#",
+    cta: "",
+    icon: Package,
     upcoming: true,
   },
   {

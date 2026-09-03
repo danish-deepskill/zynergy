@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Teknologi, Desain, Pemasaran & Pengadaan`,
+  title: `${siteConfig.name} | Teknologi, Desain, Pemasaran, Produk & Pengadaan`,
   description: companyHome.subtitle,
 };
 
@@ -44,9 +44,18 @@ export default function Home() {
       </section>
 
       <section className="px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="mx-auto grid w-full max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Row 1: agency triangle (3 equal). Row 2: Products + Supply (2 wide). */}
+        <div className="mx-auto grid w-full max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-6">
           {businessLines.map((line, index) => (
-            <Reveal key={line.value} delay={index * 0.08} className="h-full">
+            <Reveal
+              key={line.value}
+              delay={index * 0.08}
+              className={cn(
+                "h-full",
+                index < 3 ? "lg:col-span-2" : "lg:col-span-3",
+                index === businessLines.length - 1 && businessLines.length % 2 === 1 && "sm:col-span-2 lg:col-span-3",
+              )}
+            >
               <article
                 className={cn(
                   "relative flex h-full flex-col rounded-3xl border bg-white p-6 transition-all",
