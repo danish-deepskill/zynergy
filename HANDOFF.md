@@ -104,9 +104,20 @@ src/
 
 **Site structure (since 2026-09-03):** the root `/` is a thin group gateway
 showing the three business lines of PT Sinergi Mitra Abadi Jaya under the
-Zynergy brand (content in `src/content/company.ts`): Digital (flagship,
-full landing funnel moved wholesale to `/digital`), Design (`/design`,
-lean page), Pengadaan (`/pengadaan`, lean page, runs under the PT name).
+Zynergy brand (content in `src/content/company.ts`): Zynergy Digital
+(flagship, full landing funnel moved wholesale to `/digital`), Zynergy
+Design (`/desain`, lean page; `/design` 301-redirects to it), Zynergy
+Supply (`/pengadaan`, lean page, contracts run under the PT name).
+
+**Products plan (decided 2026-09-03, not yet built):** the Digital line
+will later carry software products (SaaS/AI tools, courses) besides jasa.
+Rules: this repo is marketing-only; every product lives in its OWN repo,
+deploy, and eventually own domain ("by Zynergy"); this site only lists and
+links them via a catalog (`src/content/products.ts` → `/produk/<slug>`
+marketing cards, built only when the first product is announceable; no
+"coming soon" shells). Incubate under the Zynergy umbrella, graduate to
+own brand after proven demand. Sequencing: productized vertical services
+and possibly a course first; they fund and reveal the first real product.
 Point all ads/SEO/social links at `/digital`, not `/`. Footer carries the
 PT endorsement line; `legalName` is the real PT. SEO plumbing: sitemap.ts,
 robots.ts, JSON-LD (Organization on `/`, ProfessionalService + FAQPage on
