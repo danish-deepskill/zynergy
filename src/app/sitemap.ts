@@ -9,7 +9,7 @@ const staticRoutes: { path: string; priority: number }[] = [
   { path: "/digital", priority: 1 },
   { path: "/racik-fitur", priority: 0.9 },
   { path: "/brief-project", priority: 0.9 },
-  { path: "/design", priority: 0.7 },
+  { path: "/desain", priority: 0.7 },
   { path: "/pengadaan", priority: 0.7 },
   { path: "/portofolio", priority: 0.7 },
   { path: "/blog", priority: 0.6 },

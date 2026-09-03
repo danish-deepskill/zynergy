@@ -46,7 +46,7 @@ export const businessLines: BusinessLine[] = [
     description:
       "Identitas visual yang membuat bisnis Anda dikenali: logo, konten sosial media, sampai animasi.",
     points: ["Logo & identitas brand", "Konten sosial media", "Animasi & motion graphics"],
-    href: "/design",
+    href: "/desain",
     cta: "Jelajahi Design",
     icon: Palette,
   },
