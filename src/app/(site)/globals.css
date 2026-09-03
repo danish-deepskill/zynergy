@@ -29,6 +29,14 @@
   --color-amber: #f59e0b;
   --color-amber-dark: #b45309;
   --color-amber-soft: #fef3c7;
+
+  /* Marquee klien: strip logo berjalan (dipakai halaman Supply) */
+  --animate-marquee: marquee 45s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 html {

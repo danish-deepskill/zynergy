@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Mail } from "lucide-react";
 import { supplyPage } from "@/content/company";
 import { siteConfig } from "@/content/site";
+import { cn } from "@/lib/cn";
 import { waLink } from "@/lib/wa";
 import { CtaLink } from "@/components/ui/CtaLink";
 import { CubePattern } from "@/components/ui/CubePattern";
@@ -59,20 +60,31 @@ export default function SupplyPage() {
           <p className="text-center text-xs font-bold uppercase tracking-[0.15em] text-muted">
             {supplyPage.clientsLabel}
           </p>
-          <ul className="mx-auto mt-7 flex max-w-5xl flex-wrap items-center justify-center gap-x-10 gap-y-6">
-            {supplyPage.clients.map((client) => (
-              <li key={client.name}>
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  title={client.name}
-                  width={client.width}
-                  height={client.height}
-                  className="h-9 w-auto max-w-40 object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 sm:h-10 sm:max-w-48"
-                />
-              </li>
-            ))}
-          </ul>
+          {/* Marquee: daftar dirender dua kali untuk loop mulus; duplikat aria-hidden.
+              Reduced motion: animasi mati, duplikat disembunyikan, baris wrap statis. */}
+          <div className="relative mt-7 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] motion-reduce:[mask-image:none]">
+            <ul className="flex w-max items-center motion-safe:animate-marquee motion-safe:hover:[animation-play-state:paused] motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center motion-reduce:gap-y-6">
+              {[...supplyPage.clients, ...supplyPage.clients].map((client, index) => (
+                <li
+                  key={`${client.name}-${index}`}
+                  aria-hidden={index >= supplyPage.clients.length || undefined}
+                  className={cn(
+                    "mx-7 shrink-0",
+                    index >= supplyPage.clients.length && "motion-reduce:hidden",
+                  )}
+                >
+                  <Image
+                    src={client.logo}
+                    alt={index < supplyPage.clients.length ? client.name : ""}
+                    title={client.name}
+                    width={client.width}
+                    height={client.height}
+                    className="h-9 w-auto max-w-40 object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 sm:h-10 sm:max-w-48"
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
         </Reveal>
       </Section>
 
