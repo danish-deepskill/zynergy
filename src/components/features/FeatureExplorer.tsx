@@ -17,29 +17,37 @@ import { CtaLink } from "@/components/ui/CtaLink";
 import { Reveal } from "@/components/ui/Reveal";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { FeatureCard } from "@/components/features/FeatureCard";
+import { syncSelectionUrl } from "@/components/features/selectionUrl";
+
+interface FeatureExplorerProps {
+  initialSelected?: string[];
+}
 
 /** Tap-to-select feature picker; the "checkout" is a pre-filled WhatsApp message. */
-export function FeatureExplorer() {
-  const [selected, setSelected] = useState<string[]>([]);
+export function FeatureExplorer({ initialSelected = [] }: FeatureExplorerProps) {
+  const [selected, setSelected] = useState<string[]>(initialSelected);
   const [activePreset, setActivePreset] = useState<BusinessSegment | null>(null);
+
+  const select = (values: string[]) => {
+    setSelected(values);
+    syncSelectionUrl(values);
+  };
 
   const toggle = (value: string) => {
     setActivePreset(null);
-    setSelected((current) =>
-      current.includes(value) ? current.filter((v) => v !== value) : [...current, value],
+    select(
+      selected.includes(value) ? selected.filter((v) => v !== value) : [...selected, value],
     );
   };
 
   const applyPreset = (segment: BusinessSegment) => {
     if (segment === activePreset) {
       setActivePreset(null);
-      setSelected([]);
+      select([]);
       return;
     }
     setActivePreset(segment);
-    setSelected(
-      featureCatalog.filter((f) => f.segments.includes(segment)).map((f) => f.value),
-    );
+    select(featureCatalog.filter((f) => f.segments.includes(segment)).map((f) => f.value));
   };
 
   // Catalog order keeps the WhatsApp message readable regardless of click order.
@@ -124,7 +132,7 @@ export function FeatureExplorer() {
               type="button"
               aria-label="Kosongkan pilihan"
               onClick={() => {
-                setSelected([]);
+                select([]);
                 setActivePreset(null);
               }}
               className="grid size-8 place-items-center rounded-full text-muted transition-colors hover:bg-surface-soft hover:text-ink"

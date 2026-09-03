@@ -40,7 +40,7 @@ export const siteConfig = {
   nav: [
     { label: "Beranda", href: "/#beranda" },
     { label: "Layanan", href: "/#layanan" },
-    { label: "Fitur", href: "/#fitur" },
+    { label: "Racik Fitur", href: "/racik-fitur" },
     { label: "Paket Harga", href: "/#paket" },
     { label: "Proses", href: "/#proses" },
     { label: "Portofolio", href: "/portofolio" },

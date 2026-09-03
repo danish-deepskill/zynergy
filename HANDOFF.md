@@ -102,8 +102,18 @@ src/
 └── lib/            cn.ts (clsx+twMerge), wa.ts (waLink builder)
 ```
 
-Section anchor ids: beranda, masalah, layanan, keunggulan, paket, proses,
-portofolio, testimoni, faq, kontak.
+Section anchor ids: beranda, masalah, layanan, fitur (teaser), keunggulan,
+paket, proses, portofolio, testimoni, faq, kontak.
+
+**/racik-fitur (added 2026-09-03):** lead-gen tool page — "Cek" diagnostic
+quiz (6 pain questions → verdict + feature recommendations, content in
+`src/content/quiz.ts`) flowing into a tap-to-select feature picker
+(18-feature catalog in `src/content/features.ts`, skeleton-wireframe
+thumbnails, business-type presets). Selection lives in the shareable
+`?f=` query param; checkout = pre-filled WhatsApp message. Landing page
+carries a teaser banner linking here. Planned next: landing overhaul in
+the modern Indonesian style (big type, minimal copy per section — refs:
+qasir.id, flip.id, hostinger.com/id).
 
 All copy is **original Indonesian** (intent mirrors competitor, wording does not).
 Hero visual is a CSS-only browser mockup — no image assets exist yet.

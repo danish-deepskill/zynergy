@@ -1,0 +1,34 @@
+import type { Metadata } from "next";
+import { quizSection } from "@/content/quiz";
+import { parseSelectionParam } from "@/components/features/selectionUrl";
+import { RacikFlow } from "@/components/racik/RacikFlow";
+import { Section } from "@/components/ui/Section";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+
+export const metadata: Metadata = {
+  title: "Cek & Racik Fitur Website",
+  description:
+    "Cek dalam 1 menit apakah bisnis Anda butuh website, lalu racik fitur yang dibutuhkan — kirim hasilnya langsung via WhatsApp. Gratis, tanpa komitmen.",
+};
+
+interface RacikFiturPageProps {
+  searchParams: Promise<{ f?: string }>;
+}
+
+export default async function RacikFiturPage({ searchParams }: RacikFiturPageProps) {
+  const { f } = await searchParams;
+  const initialSelected = parseSelectionParam(f);
+
+  return (
+    <div className="pt-16">
+      <Section>
+        <SectionHeading
+          badge={quizSection.badge}
+          title={quizSection.title}
+          subtitle={quizSection.subtitle}
+        />
+        <RacikFlow initialSelected={initialSelected} />
+      </Section>
+    </div>
+  );
+}

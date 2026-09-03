@@ -2,7 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { Problems } from "@/components/sections/Problems";
 import { Services } from "@/components/sections/Services";
-import { Features } from "@/components/sections/Features";
+import { RacikTeaser } from "@/components/sections/RacikTeaser";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { Pricing } from "@/components/sections/Pricing";
 import { Process } from "@/components/sections/Process";
@@ -18,7 +18,7 @@ export default function Home() {
       <StatsBar />
       <Problems />
       <Services />
-      <Features />
+      <RacikTeaser />
       <WhyUs />
       <Pricing />
       <Process />
