@@ -3,13 +3,18 @@ import { hero } from "@/content/landing";
 import { siteConfig } from "@/content/site";
 import { waLink } from "@/lib/wa";
 import { CtaLink } from "@/components/ui/CtaLink";
+import { GridPattern } from "@/components/ui/GridPattern";
 import { Reveal } from "@/components/ui/Reveal";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Hero() {
   return (
     <section id="beranda" className="relative overflow-hidden px-4 pb-16 pt-32 sm:px-6 sm:pb-20 sm:pt-40 lg:px-8">
-      {/* Latar gradient lembut */}
+      {/* Latar gradient lembut + grid halus */}
+      <GridPattern
+        id="hero-grid"
+        className="text-primary/[0.06] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_30%,black_25%,transparent_100%)]"
+      />
       <div className="pointer-events-none absolute -left-40 -top-40 size-[28rem] rounded-full bg-primary/10 blur-3xl" aria-hidden />
       <div className="pointer-events-none absolute -right-40 top-24 size-[28rem] rounded-full bg-secondary/10 blur-3xl" aria-hidden />
 

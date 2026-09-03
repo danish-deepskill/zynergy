@@ -5,6 +5,7 @@ import { businessLines, companyHome } from "@/content/company";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/cn";
 import { CtaLink } from "@/components/ui/CtaLink";
+import { GridPattern } from "@/components/ui/GridPattern";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -29,6 +30,10 @@ export default function Home() {
       />
       {/* Deep Navy group treatment: gateway only; funnel pages stay light */}
       <div className="relative overflow-hidden bg-gradient-to-br from-navy to-navy-light">
+        <GridPattern
+          id="gateway-grid"
+          className="text-white/[0.07] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_35%,black_30%,transparent_100%)]"
+        />
         <div
           aria-hidden
           className="pointer-events-none absolute -left-40 -top-40 size-[30rem] rounded-full bg-primary/20 blur-3xl"
