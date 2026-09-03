@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Mail } from "lucide-react";
+import { FileDown, Mail } from "lucide-react";
 import { supplyPage } from "@/content/company";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/cn";
@@ -154,6 +154,36 @@ export default function SupplyPage() {
             </Reveal>
           ))}
         </div>
+      </Section>
+
+      {/* Informasi perusahaan: blok verifikasi untuk vendor registration */}
+      <Section tone="soft" className="py-16 sm:py-20">
+        <Reveal>
+          <div className="mx-auto max-w-2xl rounded-3xl border border-line bg-white p-8 sm:p-10">
+            <h2 className="text-xl font-extrabold tracking-tight text-ink">
+              {supplyPage.identity.title}
+            </h2>
+            <dl className="mt-6 space-y-4">
+              {supplyPage.identity.rows.map((row) => (
+                <div key={row.label} className="grid gap-1 sm:grid-cols-[10rem_1fr] sm:gap-4">
+                  <dt className="text-sm font-semibold text-muted">{row.label}</dt>
+                  <dd className="text-sm font-medium text-ink">{row.value}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-6 border-t border-line pt-5 text-sm leading-relaxed text-muted">
+              {supplyPage.identity.docNote}
+            </p>
+            <CtaLink
+              href={supplyPage.identity.comproHref}
+              variant="outline"
+              className="mt-5 w-full sm:w-auto"
+            >
+              <FileDown className="size-4" />
+              {supplyPage.identity.comproCta}
+            </CtaLink>
+          </div>
+        </Reveal>
       </Section>
 
       {/* CTA band: steel */}

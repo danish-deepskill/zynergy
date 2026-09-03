@@ -219,6 +219,20 @@ export const supplyPage = {
   brandsLabel: "Brand yang pernah kami pasok:",
   sourcingNote:
     "Didukung jaringan supplier internasional (Amerika Serikat, Inggris, Singapura) dan pemasok domestik.",
+  identity: {
+    title: "Informasi Perusahaan",
+    // TODO(launch): tambah nomor telepon/WA kantor saat sudah ada nomor resmi.
+    rows: [
+      { label: "Nama perusahaan", value: "PT Sinergi Mitra Abadi Jaya" },
+      { label: "Berdiri", value: "2008" },
+      { label: "Alamat", value: "Jl. Lapangan Tembak No. 1, Cilandak Timur, Jakarta Selatan 12560" },
+      { label: "Email", value: "halo@zynergy.co.id" },
+    ],
+    docNote:
+      "Dokumen legalitas lengkap tersedia untuk kebutuhan registrasi vendor.",
+    comproCta: "Download Company Profile (PDF)",
+    comproHref: "/docs/zynergy-supply-company-profile.pdf",
+  },
   ctaTitle: "Punya SR atau daftar kebutuhan barang?",
   ctaSubtitle:
     "Kirimkan detailnya, tim pengadaan kami balas dengan penawaran sesuai spesifikasi.",
