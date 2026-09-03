@@ -103,11 +103,14 @@ src/
 ```
 
 **Site structure (since 2026-09-03):** the root `/` is a thin group gateway
-showing the three business lines of PT Sinergi Mitra Abadi Jaya under the
+showing the four business lines of PT Sinergi Mitra Abadi Jaya under the
 Zynergy brand (content in `src/content/company.ts`): Zynergy Digital
 (flagship, full landing funnel moved wholesale to `/digital`), Zynergy
 Design (`/desain`, lean page; `/design` 301-redirects to it), Zynergy
-Supply (`/pengadaan`, lean page, contracts run under the PT name).
+Supply (`/pengadaan`, lean page, contracts run under the PT name), and
+Zynergy Marketing (upcoming card, no page yet). Gateway motto follows the
+Whitebox model (user's stated inspiration): outcome headline over the
+agency triangle teknologi/desain/pemasaran.
 
 **Products plan (decided 2026-09-03, not yet built):** the Digital line
 will later carry software products (SaaS/AI tools, courses) besides jasa.

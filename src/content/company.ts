@@ -1,4 +1,4 @@
-import { Boxes, type LucideIcon, MonitorSmartphone, Palette } from "lucide-react";
+import { Boxes, type LucideIcon, Megaphone, MonitorSmartphone, Palette } from "lucide-react";
 
 /**
  * Group-level content: the root page presents the three business lines of
@@ -17,13 +17,15 @@ export interface BusinessLine {
   icon: LucideIcon;
   /** Flagship line gets visual priority on the root page. */
   flagship?: boolean;
+  /** Announced but not yet open; renders a "Segera Hadir" card without CTA. */
+  upcoming?: boolean;
 }
 
 export const companyHome = {
   eyebrow: "PT Sinergi Mitra Abadi Jaya",
-  title: "Satu Sinergi, Tiga Lini Bisnis.",
+  title: "Membantu Bisnis Bertumbuh lewat Teknologi, Desain, dan Pemasaran.",
   subtitle:
-    "Zynergy membantu bisnis Indonesia tumbuh lewat solusi digital, desain kreatif, dan pengadaan barang industri.",
+    "Zynergy adalah rumah bagi empat lini bisnis PT Sinergi Mitra Abadi Jaya: digital, desain, pemasaran, dan pengadaan barang industri.",
 } as const;
 
 export const businessLines: BusinessLine[] = [
@@ -49,6 +51,18 @@ export const businessLines: BusinessLine[] = [
     href: "/desain",
     cta: "Jelajahi Design",
     icon: Palette,
+  },
+  {
+    value: "marketing",
+    name: "Zynergy Marketing",
+    tagline: "SEO, Iklan & Sosial Media",
+    description:
+      "Mendatangkan pelanggan lewat kanal digital: pencarian Google, iklan berbayar, dan konten sosial media.",
+    points: ["SEO & konten", "Iklan Meta & Google", "Manajemen sosial media"],
+    href: "#",
+    cta: "",
+    icon: Megaphone,
+    upcoming: true,
   },
   {
     value: "pengadaan",

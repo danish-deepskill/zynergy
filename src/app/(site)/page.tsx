@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Digital, Desain & Pengadaan Barang`,
+  title: `${siteConfig.name} | Teknologi, Desain, Pemasaran & Pengadaan`,
   description: companyHome.subtitle,
 };
 
@@ -44,17 +44,24 @@ export default function Home() {
       </section>
 
       <section className="px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="mx-auto grid w-full max-w-6xl gap-5 lg:grid-cols-3">
+        <div className="mx-auto grid w-full max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {businessLines.map((line, index) => (
             <Reveal key={line.value} delay={index * 0.08} className="h-full">
               <article
                 className={cn(
-                  "flex h-full flex-col rounded-3xl border bg-white p-8 transition-all hover:shadow-lg",
+                  "relative flex h-full flex-col rounded-3xl border bg-white p-6 transition-all",
                   line.flagship
-                    ? "border-primary/30 shadow-lg shadow-primary/10"
-                    : "border-line hover:border-primary/30",
+                    ? "border-primary/30 shadow-lg shadow-primary/10 hover:shadow-lg"
+                    : line.upcoming
+                      ? "border-dashed border-line"
+                      : "border-line hover:border-primary/30 hover:shadow-lg",
                 )}
               >
+                {line.upcoming && (
+                  <span className="absolute right-4 top-4 rounded-full bg-primary-soft px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary-dark">
+                    Segera
+                  </span>
+                )}
                 <span
                   className={cn(
                     "grid size-12 place-items-center rounded-2xl",
@@ -75,14 +82,20 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="mt-auto pt-6">
-                  <CtaLink
-                    href={line.href}
-                    variant={line.flagship ? "primary" : "outline"}
-                    className="w-full"
-                  >
-                    {line.cta}
-                    <ArrowRight className="size-4" />
-                  </CtaLink>
+                  {line.upcoming ? (
+                    <span className="inline-flex w-full items-center justify-center rounded-xl border border-dashed border-line px-6 py-3 text-sm font-semibold text-muted">
+                      Segera Hadir
+                    </span>
+                  ) : (
+                    <CtaLink
+                      href={line.href}
+                      variant={line.flagship ? "primary" : "outline"}
+                      className="w-full"
+                    >
+                      {line.cta}
+                      <ArrowRight className="size-4" />
+                    </CtaLink>
+                  )}
                 </div>
               </article>
             </Reveal>
