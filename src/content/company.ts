@@ -43,20 +43,20 @@ export const businessLines: BusinessLine[] = [
     description:
       "Website profesional untuk UMKM dan bisnis lokal, lengkap dengan CMS, blog, dan integrasi WhatsApp.",
     points: ["Website bisnis & UMKM", "Aplikasi web & mobile", "CMS + admin panel"],
-    href: "/teknologi",
+    href: "/technology",
     cta: "Jelajahi Technology",
     icon: MonitorSmartphone,
     flagship: true,
   },
   {
-    value: "design",
-    name: "Zynergy Design",
+    value: "creative",
+    name: "Zynergy Creative",
     tagline: "Grafis, Branding & Animasi",
     description:
       "Identitas visual yang membuat bisnis Anda dikenali: logo, konten sosial media, sampai animasi.",
     points: ["Logo & identitas brand", "Konten sosial media", "Animasi & motion graphics"],
-    href: "/desain",
-    cta: "Jelajahi Design",
+    href: "/creative",
+    cta: "Jelajahi Creative",
     icon: Palette,
   },
   {
@@ -97,8 +97,8 @@ export const businessLines: BusinessLine[] = [
 ];
 
 /** TODO(launch): expand both line pages with real portfolio & detail services. */
-export const designPage = {
-  badge: "Zynergy Design",
+export const creativePage = {
+  badge: "Zynergy Creative",
   title: "Desain yang Membuat Bisnis Anda Dikenali",
   subtitle:
     "Dari logo sampai animasi, kami bantu bisnis Anda tampil konsisten dan profesional di semua kanal.",

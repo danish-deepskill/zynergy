@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
-import { designPage } from "@/content/company";
+import { creativePage } from "@/content/company";
 import { siteConfig } from "@/content/site";
 import { waLink } from "@/lib/wa";
 import { CtaLink } from "@/components/ui/CtaLink";
@@ -10,7 +10,7 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export const metadata: Metadata = {
   title: "Zynergy Design | Grafis, Branding & Animasi",
-  description: designPage.subtitle,
+  description: creativePage.subtitle,
 };
 
 export default function DesignPage() {
@@ -18,13 +18,13 @@ export default function DesignPage() {
     <div className="pt-16">
       <Section>
         <SectionHeading
-          badge={designPage.badge}
-          title={designPage.title}
-          subtitle={designPage.subtitle}
+          badge={creativePage.badge}
+          title={creativePage.title}
+          subtitle={creativePage.subtitle}
         />
         <div className="mx-auto max-w-xl rounded-3xl border border-line bg-white p-8 sm:p-10">
           <ul className="space-y-3">
-            {designPage.services.map((service) => (
+            {creativePage.services.map((service) => (
               <li key={service} className="flex items-center gap-2.5 text-sm text-muted">
                 <Check className="size-4 shrink-0 text-secondary" />
                 {service}
@@ -37,7 +37,7 @@ export default function DesignPage() {
             className="mt-8 w-full"
           >
             <WhatsAppIcon className="size-4" />
-            {designPage.cta}
+            {creativePage.cta}
           </CtaLink>
         </div>
       </Section>
