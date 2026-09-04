@@ -8,10 +8,12 @@ import { syncSelectionUrl } from "@/components/features/selectionUrl";
 interface RacikFlowProps {
   /** Pre-validated selection from the `?f=` query param. */
   initialSelected: string[];
+  /** Pre-validated Creative & Marketing add-ons from the `?a=` query param. */
+  initialAddOns: string[];
 }
 
 /** Cek (diagnose) on top, Racik (prescribe & pick) below. */
-export function RacikFlow({ initialSelected }: RacikFlowProps) {
+export function RacikFlow({ initialSelected, initialAddOns }: RacikFlowProps) {
   const [selection, setSelection] = useState(initialSelected);
   const explorerRef = useRef<HTMLDivElement>(null);
 
@@ -21,7 +23,7 @@ export function RacikFlow({ initialSelected }: RacikFlowProps) {
 
   const applyRecommendation = (features: string[]) => {
     setSelection(features);
-    syncSelectionUrl(features);
+    syncSelectionUrl(features, initialAddOns);
     scrollToExplorer();
   };
 
@@ -30,7 +32,11 @@ export function RacikFlow({ initialSelected }: RacikFlowProps) {
       <CekQuiz onApply={applyRecommendation} onSkip={scrollToExplorer} />
       <div ref={explorerRef} id="racik" className="mt-16 scroll-mt-24 sm:mt-20">
         {/* Remount on new recommendation so the picker adopts it as fresh state. */}
-        <FeatureExplorer key={selection.join(",")} initialSelected={selection} />
+        <FeatureExplorer
+          key={selection.join(",")}
+          initialSelected={selection}
+          initialAddOns={initialAddOns}
+        />
       </div>
     </>
   );

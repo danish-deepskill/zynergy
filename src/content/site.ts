@@ -35,8 +35,8 @@ export const siteConfig = {
       "Halo Zynergy! Saya ingin konsultasi gratis mengenai pembuatan website. Bisa dibantu?",
     package: (packageName: string) =>
       `Halo Zynergy! Saya tertarik dengan paket ${packageName}. Mohon info lebih lanjut ya.`,
-    features: (featureList: string) =>
-      `Halo Zynergy! Saya ingin website dengan fitur: ${featureList}. Bisa dibantu rekomendasinya?`,
+    features: (featureList: string, addOnList?: string) =>
+      `Halo Zynergy! Saya ingin website dengan fitur: ${featureList}.${addOnList ? ` Tambahan: ${addOnList}.` : ""} Bisa dibantu rekomendasinya?`,
     design:
       "Halo Zynergy! Saya ingin konsultasi kebutuhan desain (logo/konten/animasi). Bisa dibantu?",
     pengadaan:

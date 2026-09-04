@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { quizSection } from "@/content/quiz";
-import { parseSelectionParam } from "@/components/features/selectionUrl";
+import { parseAddOnsParam, parseSelectionParam } from "@/components/features/selectionUrl";
 import { RacikFlow } from "@/components/racik/RacikFlow";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -12,12 +12,13 @@ export const metadata: Metadata = {
 };
 
 interface RacikFiturPageProps {
-  searchParams: Promise<{ f?: string }>;
+  searchParams: Promise<{ f?: string; a?: string }>;
 }
 
 export default async function RacikFiturPage({ searchParams }: RacikFiturPageProps) {
-  const { f } = await searchParams;
+  const { f, a } = await searchParams;
   const initialSelected = parseSelectionParam(f);
+  const initialAddOns = parseAddOnsParam(a);
 
   return (
     <div className="pt-16">
@@ -27,7 +28,7 @@ export default async function RacikFiturPage({ searchParams }: RacikFiturPagePro
           title={quizSection.title}
           subtitle={quizSection.subtitle}
         />
-        <RacikFlow initialSelected={initialSelected} />
+        <RacikFlow initialSelected={initialSelected} initialAddOns={initialAddOns} />
       </Section>
     </div>
   );

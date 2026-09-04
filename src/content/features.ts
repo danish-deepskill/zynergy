@@ -228,6 +228,21 @@ export const featureCatalog: WebFeature[] = [
   },
 ];
 
+/**
+ * Add-on jasa Creative & Marketing: bukan bagian website, jadi bukan kartu
+ * fitur; ditawarkan setelah memilih fitur dan ikut terkirim di pesan WA.
+ */
+export const addOns = {
+  label: "Butuh juga dari tim Creative & Marketing?",
+  items: [
+    { value: "logo-branding", label: "Logo & brand identity" },
+    { value: "konten-sosmed", label: "Konten sosial media" },
+    { value: "foto-video", label: "Foto & video produk" },
+    { value: "iklan-digital", label: "Iklan Meta & Google" },
+    { value: "seo-bulanan", label: "SEO bulanan" },
+  ],
+} as const;
+
 /** Baseline yang tidak perlu dipilih, selling point di bawah daftar fitur. */
 export const includedInEveryPackage = {
   label: "Sudah termasuk di semua paket:",

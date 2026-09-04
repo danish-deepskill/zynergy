@@ -26,9 +26,7 @@ export interface IconCard {
   description: string;
 }
 
-export interface ServiceCard extends IconCard {
-  features: string[];
-}
+export type ServiceCard = IconCard;
 
 export interface PricingTier {
   name: string;
@@ -129,37 +127,31 @@ export const services = {
       icon: Store,
       title: "UMKM & Toko Online",
       description: "Katalog produk dengan tombol pesan langsung ke WhatsApp.",
-      features: ["Katalog produk", "Order via WhatsApp", "Info promo terpusat"],
     },
     {
       icon: UserRound,
       title: "Personal Branding",
       description: "Profil profesional agar konsultan, trainer, dan kreator mudah dipercaya.",
-      features: ["Profil & portofolio", "Testimoni klien", "Booking layanan"],
     },
     {
       icon: MapPin,
       title: "Bisnis Lokal",
       description: "Agar resto, klinik, dan salon mudah ditemukan pelanggan sekitar.",
-      features: ["Integrasi Google Maps", "Daftar menu / layanan", "Reservasi online"],
     },
     {
       icon: GraduationCap,
       title: "Sekolah & Lembaga",
       description: "Profil institusi, pendaftaran, dan agenda dalam satu website resmi.",
-      features: ["Info pendaftaran (PPDB)", "Profil institusi", "Berita & agenda"],
     },
     {
       icon: Building2,
       title: "Company Profile",
       description: "Visi, layanan, tim, dan portofolio perusahaan tampil profesional.",
-      features: ["Profil perusahaan", "Layanan & tim", "Portofolio proyek"],
     },
     {
       icon: Briefcase,
       title: "Jasa Profesional",
       description: "Sistem booking dan kredibilitas untuk dokter, pengacara, arsitek.",
-      features: ["Booking online", "Halaman layanan", "Konsultasi via WA"],
     },
   ] satisfies ServiceCard[],
 };

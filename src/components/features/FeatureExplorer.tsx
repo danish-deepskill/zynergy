@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { X } from "lucide-react";
+import { Plus, X } from "lucide-react";
 import {
+  addOns,
   type BusinessSegment,
   featureCatalog,
   featureCategories,
@@ -21,22 +22,37 @@ import { syncSelectionUrl } from "@/components/features/selectionUrl";
 
 interface FeatureExplorerProps {
   initialSelected?: string[];
+  initialAddOns?: string[];
 }
 
 /** Tap-to-select feature picker; the "checkout" is a pre-filled WhatsApp message. */
-export function FeatureExplorer({ initialSelected = [] }: FeatureExplorerProps) {
+export function FeatureExplorer({
+  initialSelected = [],
+  initialAddOns = [],
+}: FeatureExplorerProps) {
   const [selected, setSelected] = useState<string[]>(initialSelected);
+  const [selectedAddOns, setSelectedAddOns] = useState<string[]>(initialAddOns);
   const [activePreset, setActivePreset] = useState<BusinessSegment | null>(null);
 
-  const select = (values: string[]) => {
+  const select = (values: string[], addOnValues: string[] = selectedAddOns) => {
     setSelected(values);
-    syncSelectionUrl(values);
+    setSelectedAddOns(addOnValues);
+    syncSelectionUrl(values, addOnValues);
   };
 
   const toggle = (value: string) => {
     setActivePreset(null);
     select(
       selected.includes(value) ? selected.filter((v) => v !== value) : [...selected, value],
+    );
+  };
+
+  const toggleAddOn = (value: string) => {
+    select(
+      selected,
+      selectedAddOns.includes(value)
+        ? selectedAddOns.filter((v) => v !== value)
+        : [...selectedAddOns, value],
     );
   };
 
@@ -54,6 +70,9 @@ export function FeatureExplorer({ initialSelected = [] }: FeatureExplorerProps) 
   const selectedTitles = featureCatalog
     .filter((f) => selected.includes(f.value))
     .map((f) => f.title);
+  const addOnLabels = addOns.items
+    .filter((a) => selectedAddOns.includes(a.value))
+    .map((a) => a.label);
 
   return (
     <div>
@@ -109,6 +128,35 @@ export function FeatureExplorer({ initialSelected = [] }: FeatureExplorerProps) 
         ))}
       </div>
 
+      {/* Add-on jasa Creative & Marketing, ikut terkirim di pesan WhatsApp */}
+      <Reveal>
+        <div className="mt-12 rounded-3xl border border-line bg-surface-soft p-6 text-center sm:p-8">
+          <p className="text-sm font-bold text-ink">{addOns.label}</p>
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+            {addOns.items.map((addOn) => {
+              const active = selectedAddOns.includes(addOn.value);
+              return (
+                <button
+                  key={addOn.value}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => toggleAddOn(addOn.value)}
+                  className={cn(
+                    "inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-semibold transition-colors",
+                    active
+                      ? "border-primary bg-primary text-white"
+                      : "border-line bg-white text-muted hover:border-primary/40 hover:text-primary",
+                  )}
+                >
+                  {active ? <X className="size-3.5" /> : <Plus className="size-3.5" />}
+                  {addOn.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </Reveal>
+
       <p className="mt-10 text-center text-sm text-muted">
         <span className="font-semibold text-ink">{includedInEveryPackage.label}</span>{" "}
         {includedInEveryPackage.items.join(" · ")}
@@ -132,7 +180,7 @@ export function FeatureExplorer({ initialSelected = [] }: FeatureExplorerProps) 
               type="button"
               aria-label="Kosongkan pilihan"
               onClick={() => {
-                select([]);
+                select([], []);
                 setActivePreset(null);
               }}
               className="grid size-8 place-items-center rounded-full text-muted transition-colors hover:bg-surface-soft hover:text-ink"
@@ -140,10 +188,16 @@ export function FeatureExplorer({ initialSelected = [] }: FeatureExplorerProps) 
               <X className="size-4" />
             </button>
             <span className="text-sm font-semibold text-ink">
-              {selected.length} fitur dipilih
+              {selected.length} fitur
+              {selectedAddOns.length > 0 && ` + ${selectedAddOns.length} tambahan`}
             </span>
             <CtaLink
-              href={waLink(siteConfig.waMessages.features(selectedTitles.join(", ")))}
+              href={waLink(
+                siteConfig.waMessages.features(
+                  selectedTitles.join(", "),
+                  addOnLabels.length > 0 ? addOnLabels.join(", ") : undefined,
+                ),
+              )}
               variant="whatsapp"
               className="px-4 py-2.5"
             >
