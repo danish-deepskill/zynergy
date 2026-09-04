@@ -15,7 +15,7 @@ modeled on the competitor **https://www.digitalinaja.id/** ("CreativeAI").
 User/team: team@deepskill.io.
 
 **Status (2026-09-04): full group site LIVE on https://zynergy-dev.vercel.app**
-(navy 5-line gateway, /technology funnel, /creative, /supply credibility
+(navy gateway, /digital funnel, /supply credibility
 page + compro PDF, /racik-fitur, /tentang, SEO layer all deployed)
 (Vercel project `zynergy`, scope `devdanzen-projects`, deploy via
 `vercel deploy --prod`). Prod infra: **Neon Postgres** (marketplace resource
