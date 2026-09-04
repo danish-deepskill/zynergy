@@ -193,6 +193,46 @@ export const whyUs = {
   ] satisfies IconCard[],
 };
 
+/** Kapabilitas agency (gaya Whitebox: tiga kolom dalam satu tim). */
+export const capabilities = {
+  badge: "Kapabilitas",
+  title: "Satu Tim, Tiga Kapabilitas",
+  subtitle:
+    "Technology, creative, dan marketing dikerjakan satu tim, jadi hasilnya nyambung dari desain sampai penjualan.",
+  columns: [
+    {
+      title: "Technology",
+      items: [
+        "Website development",
+        "Web app & mobile app",
+        "UI/UX design",
+        "Custom CMS & admin panel",
+        "Integrasi WhatsApp & pembayaran",
+      ],
+    },
+    {
+      title: "Creative",
+      items: [
+        "Logo & brand identity",
+        "Konten sosial media",
+        "Materi promosi & collateral",
+        "Animasi & motion graphics",
+        "Ilustrasi & aset visual",
+      ],
+    },
+    {
+      title: "Marketing",
+      items: [
+        "SEO & content",
+        "Meta & Google Ads",
+        "Social media management",
+        "Setup analytics & tracking",
+        "Kampanye email & WhatsApp",
+      ],
+    },
+  ],
+};
+
 export const pricing = {
   badge: "Paket Harga",
   title: "Investasi yang Sesuai Skala Bisnis Anda",

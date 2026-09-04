@@ -104,17 +104,17 @@ src/
 └── lib/            cn.ts (clsx+twMerge), wa.ts (waLink builder)
 ```
 
-**Site structure (since 2026-09-03):** the root `/` is a thin group gateway
-showing the five business lines of PT Sinergi Mitra Abadi Jaya under the
-Zynergy brand (content in `src/content/company.ts`): Zynergy Technology
-(flagship, full landing funnel at `/technology`), Zynergy
-Creative (`/creative`, lean page), Zynergy
-Supply (`/supply`; steel+amber industrial design, real categories since-2008 credibility, contracts run under the PT name), and
-Zynergy Marketing (upcoming card, no page yet), and Zynergy Products
-(upcoming card teasing the three draft products in products.ts). Gateway
-layout: agency triangle row (3 equal) over Products+Supply row (2 wide). Gateway motto follows the
-Whitebox model (user's stated inspiration): outcome headline over the
-agency triangle teknologi/desain/pemasaran.
+**Site structure (since 2026-09-04, agency lines MERGED):** the root `/`
+is a navy group gateway with THREE lines (content in company.ts):
+**Zynergy Digital** (flagship, full-width card; merges the former
+Technology/Creative/Marketing lines per the same-buyer rule; full funnel
+at `/digital` incl. a Whitebox-style "Satu Tim, Tiga Kapabilitas"
+3-column section), **Zynergy Products** (upcoming card, drafts in
+products.ts), **Zynergy Supply** (`/supply`; steel+amber industrial
+design, 13-client marquee, six categories, identity block + compro PDF at
+/docs/, contracts under the PT name). Former routes /technology and
+/creative were REMOVED (no redirects, pre-launch). Gateway motto follows
+the Whitebox model (user's stated inspiration).
 
 **Supply line (public-safe summary):** the PT (founded 2008) supplies
 networking, electrical, and infrastructure components to industrial

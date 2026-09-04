@@ -8,6 +8,7 @@ import { Problems } from "@/components/sections/Problems";
 import { Services } from "@/components/sections/Services";
 import { RacikTeaser } from "@/components/sections/RacikTeaser";
 import { WhyUs } from "@/components/sections/WhyUs";
+import { Capabilities } from "@/components/sections/Capabilities";
 import { Pricing } from "@/components/sections/Pricing";
 import { Process } from "@/components/sections/Process";
 import { Portfolio } from "@/components/sections/Portfolio";
@@ -53,6 +54,7 @@ export default function DigitalPage() {
       <Services />
       <RacikTeaser />
       <WhyUs />
+      <Capabilities />
       <Pricing />
       <Process />
       <Portfolio />

@@ -59,7 +59,7 @@ export default function Home() {
         </section>
 
         <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
-        {/* Row 1: agency triangle (3 equal). Row 2: Products + Supply (2 wide). */}
+        {/* Row 1: Digital flagship (full width). Row 2: Products + Supply. */}
         <div className="mx-auto grid w-full max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-6">
           {businessLines.map((line, index) => (
             <Reveal
@@ -67,8 +67,7 @@ export default function Home() {
               delay={index * 0.08}
               className={cn(
                 "h-full",
-                index < 3 ? "lg:col-span-2" : "lg:col-span-3",
-                index === businessLines.length - 1 && businessLines.length % 2 === 1 && "sm:col-span-2 lg:col-span-3",
+                line.flagship ? "sm:col-span-2 lg:col-span-6" : "lg:col-span-3",
               )}
             >
               <article
@@ -97,7 +96,7 @@ export default function Home() {
                 <h2 className="mt-5 text-lg font-extrabold text-white">{line.name}</h2>
                 <p className="text-sm font-semibold text-navy-accent">{line.tagline}</p>
                 <p className="mt-3 text-sm leading-relaxed text-navy-ink">{line.description}</p>
-                <ul className="mt-4 space-y-1.5">
+                <ul className={cn("mt-4 gap-1.5", line.flagship ? "grid sm:grid-cols-3" : "grid")}>
                   {line.points.map((point) => (
                     <li key={point} className="flex items-center gap-2 text-sm text-navy-ink">
                       <Check className="size-3.5 shrink-0 text-secondary" />
@@ -115,7 +114,7 @@ export default function Home() {
                       href={line.href}
                       variant={line.flagship ? "primary" : "outline"}
                       className={cn(
-                        "w-full",
+                        line.flagship ? "w-full sm:w-auto" : "w-full",
                         !line.flagship &&
                           "border-white/20 bg-transparent text-white hover:border-navy-accent hover:bg-white/5 hover:text-white",
                       )}

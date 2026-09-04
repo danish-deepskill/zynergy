@@ -45,12 +45,12 @@ export const siteConfig = {
 
   nav: [
     { label: "Beranda", href: "/" },
-    { label: "Technology", href: "/technology" },
+    { label: "Digital", href: "/digital" },
     { label: "Racik Fitur", href: "/racik-fitur" },
-    { label: "Paket Harga", href: "/technology#paket" },
+    { label: "Paket Harga", href: "/digital#paket" },
     { label: "Portofolio", href: "/portofolio" },
     { label: "Blog", href: "/blog" },
-    { label: "FAQ", href: "/technology#faq" },
-    { label: "Kontak", href: "/technology#kontak" },
+    { label: "FAQ", href: "/digital#faq" },
+    { label: "Kontak", href: "/digital#kontak" },
   ] satisfies NavItem[],
 } as const;
