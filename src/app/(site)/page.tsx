@@ -4,6 +4,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { businessLines, companyHome } from "@/content/company";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/cn";
+import { ClientMarquee } from "@/components/ui/ClientMarquee";
 import { CtaLink } from "@/components/ui/CtaLink";
 import { GridPattern } from "@/components/ui/GridPattern";
 import { JsonLd } from "@/components/ui/JsonLd";
@@ -136,6 +137,18 @@ export default function Home() {
           </p>
         </section>
       </div>
+
+      {/* Klien grup: aset kepercayaan lintas lini */}
+      <section className="px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
+        <div className="mx-auto w-full max-w-6xl">
+          <Reveal>
+            <p className="text-center text-xs font-bold uppercase tracking-[0.15em] text-muted">
+              Dipercaya oleh
+            </p>
+            <ClientMarquee className="mt-7" />
+          </Reveal>
+        </div>
+      </section>
     </>
   );
 }
