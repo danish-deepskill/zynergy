@@ -297,6 +297,14 @@ export const pricing = {
       ],
     },
   ] satisfies PricingTier[],
+  /** Lane terpisah untuk kebutuhan kompleks: harga per scope, bukan per paket. */
+  customTier: {
+    badge: "Custom",
+    title: "Butuh yang lebih kompleks?",
+    description:
+      "Web app, mobile app, dashboard internal, atau integrasi khusus. Kami scoping kebutuhan Anda dulu, lalu ajukan proposal dengan timeline dan harga transparan.",
+    cta: "Diskusikan Kebutuhan Anda",
+  },
   closing:
     "Semua paket sudah termasuk hosting, SSL, desain responsive, SEO dasar, dan maintenance selama berlangganan.",
 };

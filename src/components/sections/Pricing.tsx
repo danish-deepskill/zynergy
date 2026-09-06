@@ -97,6 +97,28 @@ export function Pricing() {
           </Reveal>
         ))}
       </div>
+      {/* Lane custom: engagement per scope, harga lewat diskusi */}
+      <Reveal>
+        <div className="mt-8 flex flex-col items-center justify-between gap-5 rounded-2xl border border-dashed border-primary/40 bg-primary-soft/50 p-7 text-center sm:flex-row sm:text-left">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary-dark">
+              {pricing.customTier.badge}
+            </span>
+            <h3 className="mt-2.5 text-lg font-extrabold text-ink">{pricing.customTier.title}</h3>
+            <p className="mt-1.5 max-w-xl text-sm leading-relaxed text-muted">
+              {pricing.customTier.description}
+            </p>
+          </div>
+          <CtaLink
+            href={waLink(siteConfig.waMessages.custom)}
+            variant="whatsapp"
+            className="shrink-0"
+          >
+            {pricing.customTier.cta}
+          </CtaLink>
+        </div>
+      </Reveal>
+
       <p className="mt-10 text-center text-sm text-muted">{pricing.closing}</p>
     </Section>
   );

@@ -40,6 +40,8 @@ export const siteConfig = {
       `Halo Zynergy! Saya ingin website dengan fitur: ${featureList}.${addOnList ? ` Tambahan: ${addOnList}.` : ""} Bisa dibantu rekomendasinya?`,
     design:
       "Halo Zynergy! Saya ingin konsultasi kebutuhan desain (logo/konten/animasi). Bisa dibantu?",
+    custom:
+      "Halo Zynergy! Saya punya kebutuhan aplikasi/sistem yang lebih kompleks. Bisa diskusi scope-nya?",
     pengadaan:
       "Halo, saya ingin menghubungi tim pengadaan PT Sinergi Mitra Abadi Jaya terkait kebutuhan barang.",
   },
