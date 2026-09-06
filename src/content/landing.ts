@@ -30,7 +30,10 @@ export type ServiceCard = IconCard;
 
 export interface PricingTier {
   name: string;
+  /** Satu kalimat tujuan: paket ini untuk mencapai apa. */
   description: string;
+  /** Siapa yang cocok, bahasa sehari-hari. */
+  bestFor: string;
   /** Angka saja, tanpa "Rp", dirender terpisah. */
   price: string;
   period: string;
@@ -38,6 +41,7 @@ export interface PricingTier {
   /** Deep Navy card treatment untuk tier paling eksklusif. */
   premium?: boolean;
   badge?: string;
+  /** HANYA pembeda vs tier di bawahnya; kesamaan masuk ke closing. */
   features: string[];
 }
 
@@ -246,60 +250,55 @@ export const pricing = {
   tiers: [
     {
       name: "Starter",
-      description: "Langkah pertama untuk hadir online dengan budget hemat.",
+      description: "Supaya bisnis Anda ditemukan dan dipercaya.",
+      bestFor: "Baru mulai online, butuh alamat resmi di internet.",
       price: "500K",
       period: "/ tahun",
       highlighted: false,
       features: [
-        "Landing page profesional 1 halaman",
-        "Gratis domain .my.id & hosting",
-        "Desain responsive di semua perangkat",
-        "Tombol chat WhatsApp (CTWA)",
-        "Integrasi sosial media",
-        "SSL/HTTPS aktif",
-        "SEO dasar",
-        "Revisi sesuai brief awal",
+        "Profil bisnis 1 halaman yang rapi",
+        "Domain .my.id gratis",
+        "Tombol chat WhatsApp",
+        "Info harga, lokasi & jam buka jelas",
       ],
     },
     {
       name: "Business",
-      description: "Paket terpopuler: landing page lengkap siap menerima leads.",
+      description: "Supaya pengunjung jadi pesanan.",
+      bestFor: "Aktif jualan via WhatsApp dan ingin leads masuk teratur.",
       price: "950K",
       period: "/ tahun",
       highlighted: true,
       badge: "Paling Populer",
       features: [
-        "Semua benefit paket Starter",
-        "Gratis domain .com atau .id",
-        "Struktur halaman lebih lengkap",
-        "Copywriting untuk headline & CTA",
-        "Form leads / konsultasi",
-        "Meta Pixel & Google Analytics",
-        "Setup Google Search Console",
-        "Optimasi kecepatan website",
+        "Semua yang ada di Starter",
+        "Domain .com atau .id",
+        "Halaman lengkap: katalog, testimoni, FAQ",
+        "Form leads langsung ke WhatsApp Anda",
+        "Copywriting ditulis tim kami",
+        "Meta Pixel & Google Analytics terpasang",
       ],
     },
     {
       name: "Premium",
-      description: "Untuk bisnis yang siap beriklan dan butuh hasil maksimal.",
+      description: "Supaya iklan Anda menghasilkan maksimal.",
+      bestFor: "Siap beriklan serius atau butuh website multi-halaman.",
       price: "1.5JT",
       period: "/ tahun",
       highlighted: false,
       premium: true,
       features: [
-        "Semua benefit paket Business",
-        "Desain eksklusif high-converting",
-        "Copywriting penjualan matang",
-        "Pesan WhatsApp otomatis",
-        "Animasi modern & micro-interaction",
-        "Multi-halaman (profil, layanan, blog)",
+        "Semua yang ada di Business",
+        "Multi-halaman: profil, layanan, blog",
+        "Desain eksklusif dirancang khusus",
+        "Balasan WhatsApp otomatis",
         "Leads tersimpan ke database",
         "Support prioritas",
       ],
     },
   ] satisfies PricingTier[],
   closing:
-    "Semua paket termasuk gratis hosting, SSL aktif, dan maintenance selama berlangganan.",
+    "Semua paket sudah termasuk hosting, SSL, desain responsive, SEO dasar, dan maintenance selama berlangganan.",
 };
 
 export const processSection = {

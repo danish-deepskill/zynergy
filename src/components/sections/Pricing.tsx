@@ -33,8 +33,19 @@ export function Pricing() {
               <h3 className={cn("text-lg font-bold", tier.premium ? "text-white" : "text-ink")}>
                 Paket {tier.name}
               </h3>
-              <p className={cn("mt-1.5 min-h-10 text-sm", tier.premium ? "text-navy-ink" : "text-muted")}>
+              <p className={cn("mt-1.5 text-sm", tier.premium ? "text-navy-ink" : "text-muted")}>
                 {tier.description}
+              </p>
+              <p
+                className={cn(
+                  "mt-3 rounded-lg px-3 py-2 text-xs font-medium leading-relaxed",
+                  tier.premium ? "bg-white/10 text-navy-ink" : "bg-surface-soft text-muted",
+                )}
+              >
+                <span className={cn("font-bold", tier.premium ? "text-white" : "text-ink")}>
+                  Cocok untuk:
+                </span>{" "}
+                {tier.bestFor}
               </p>
               <p className="mt-5 flex items-baseline gap-1.5">
                 <span className={cn("text-sm font-semibold", tier.premium ? "text-navy-ink" : "text-muted")}>
