@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { teamMembers, tentangSection } from "@/content/team";
+import { nameMeaning, teamMembers, tentangSection } from "@/content/team";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/cn";
 import { waLink } from "@/lib/wa";
@@ -40,6 +40,26 @@ export default function TentangPage() {
             <p className="mt-3 text-sm leading-relaxed text-muted">{tentangSection.story}</p>
           </div>
         </Reveal>
+
+        {/* Arti nama */}
+        <Reveal>
+          <div className="mx-auto mt-14 max-w-4xl text-center">
+            <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+              {nameMeaning.title}
+            </h2>
+            <p className="mt-3 text-lg font-bold text-primary sm:text-xl">{nameMeaning.formula}</p>
+          </div>
+        </Reveal>
+        <div className="mx-auto mt-8 grid max-w-4xl gap-5 sm:grid-cols-3">
+          {nameMeaning.items.map((item, index) => (
+            <Reveal key={item.title} delay={index * 0.07} className="h-full">
+              <article className="h-full rounded-2xl border border-line bg-white p-6">
+                <h3 className="text-base font-extrabold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{item.text}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (

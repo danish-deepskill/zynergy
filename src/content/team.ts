@@ -25,6 +25,26 @@ export const tentangSection = {
     "Kami melihat terlalu banyak bisnis bagus yang kalah bersaing hanya karena tidak terlihat meyakinkan di internet. Zynergy dibangun untuk menutup celah itu: website yang cepat dan terurus, tanpa Anda harus paham teknis.",
 } as const;
 
+/** Cerita di balik nama, ditampilkan di /tentang. */
+export const nameMeaning = {
+  title: "Arti di Balik Nama",
+  formula: "Zynergy = Sinergi + Energi + Z",
+  items: [
+    {
+      title: "Sinergi",
+      text: "Diambil dari nama induk kami, PT Sinergi Mitra Abadi Jaya. Sinergi artinya hasil gabungan lebih besar dari jumlah bagiannya: technology, creative, dan marketing dikerjakan satu tim yang solid, dengan satu tujuan, bisnis Anda bertumbuh.",
+    },
+    {
+      title: "Energi",
+      text: "Tersembunyi di ujung kata. Sinergi saja tidak cukup kalau tidak hidup: energi tim inilah yang membuat pekerjaan selesai cepat, komunikasi responsif, dan ide terus mengalir.",
+    },
+    {
+      title: "Huruf Z",
+      text: "Dua makna sekaligus. Dari A sampai Z: satu tim untuk semua kebutuhan digital, dari logo sampai iklan. Dan generasi Z: energi generasi digital yang menjalankan babak baru perusahaan ini.",
+    },
+  ],
+} as const;
+
 export const teamMembers: TeamMember[] = [
   {
     name: "Nama Anggota", // TODO(launch)
