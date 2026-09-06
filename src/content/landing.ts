@@ -82,7 +82,7 @@ export const hero = {
 
 // TODO(launch): perbarui angka dengan data asli seiring bertambahnya klien.
 export const stats: Stat[] = [
-  { value: "50+", label: "Proyek Selesai" },
+  { value: "5+", label: "Proyek Selesai" },
   { value: "98%", label: "Klien Puas" },
   { value: "4.9/5", label: "Rating Klien" },
   { value: "3-7", label: "Hari Online" },

@@ -180,12 +180,12 @@ export const supplyPage = {
     "Didukung jaringan supplier internasional (Amerika Serikat, Inggris, Singapura) dan pemasok domestik.",
   identity: {
     title: "Informasi Perusahaan",
-    // TODO(launch): tambah nomor telepon/WA kantor saat sudah ada nomor resmi.
     rows: [
       { label: "Nama perusahaan", value: "PT Sinergi Mitra Abadi Jaya" },
       { label: "Berdiri", value: "2008" },
       { label: "Alamat", value: "Jl. Lapangan Tembak No. 1, Cilandak Timur, Jakarta Selatan 12560" },
-      { label: "Email", value: "halo@zynergy.co.id" },
+      { label: "Email", value: "info@zynergy.co.id" },
+      { label: "WhatsApp", value: "+62 819 3160 3815" },
     ],
     docNote:
       "Dokumen legalitas lengkap tersedia untuk kebutuhan registrasi vendor.",

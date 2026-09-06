@@ -181,7 +181,7 @@ export default function SupplyPage() {
                 {supplyPage.cta}
               </CtaLink>
               <CtaLink
-                href={`mailto:${siteConfig.email}`}
+                href={`mailto:${siteConfig.corporateEmail}`}
                 variant="outline"
                 className="border-white/25 bg-transparent text-white hover:border-amber hover:bg-white/5 hover:text-white"
               >

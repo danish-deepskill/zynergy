@@ -17,9 +17,10 @@ export const siteConfig = {
   description:
     "Zynergy membangun website profesional yang cepat, mobile-friendly, dan siap iklan, membantu bisnis Anda dipercaya pelanggan dan mendapatkan lebih banyak leads via WhatsApp.",
 
-  // TODO(launch): ganti dengan nomor WhatsApp bisnis asli (format internasional tanpa "+").
-  whatsappNumber: "6281234567890",
+  whatsappNumber: "6281931603815",
   email: "halo@zynergy.co.id",
+  /** Alamat korporat (Supply, compro, tender); alias ke inbox yang sama. */
+  corporateEmail: "info@zynergy.co.id",
   serviceArea: "Melayani seluruh Indonesia (online)",
 
   // TODO(launch): isi URL sosial media asli, hapus yang tidak dipakai.

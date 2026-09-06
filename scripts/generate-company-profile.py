@@ -38,7 +38,7 @@ clients = [
 brands = ("Schneider Electric · Cisco · Commscope · Lantronix · Panduit · Netviel · "
           "Optibelt · Gates · Bando · Phoenix Contact · Nipress · Martindale")
 
-CONTACT = "Jl. Lapangan Tembak No. 1, Cilandak Timur, Jakarta Selatan 12560  ·  halo@zynergy.co.id  ·  zynergy.co.id"
+CONTACT = "Jl. Lapangan Tembak No. 1, Cilandak Timur, Jakarta Selatan 12560  ·  info@zynergy.co.id  ·  WA +62 819 3160 3815  ·  zynergy.co.id"
 
 
 def header_footer(lang):
@@ -209,13 +209,15 @@ ID_ROWS = [
     ("Nama perusahaan", "PT Sinergi Mitra Abadi Jaya"),
     ("Berdiri", "2008"),
     ("Alamat", "Jl. Lapangan Tembak No. 1, Cilandak Timur, Jakarta Selatan 12560"),
-    ("Email", "halo@zynergy.co.id"),
+    ("Email", "info@zynergy.co.id"),
+    ("WhatsApp", "+62 819 3160 3815"),
 ]
 EN_ROWS = [
     ("Company name", "PT Sinergi Mitra Abadi Jaya"),
     ("Established", "2008"),
     ("Address", "Jl. Lapangan Tembak No. 1, Cilandak Timur, Jakarta Selatan 12560"),
-    ("Email", "halo@zynergy.co.id"),
+    ("Email", "info@zynergy.co.id"),
+    ("WhatsApp", "+62 819 3160 3815"),
 ]
 
 ID_ABOUT = ("Sejak 2008, PT Sinergi Mitra Abadi Jaya memasok komponen jaringan, kelistrikan, dan "
