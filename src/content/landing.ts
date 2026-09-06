@@ -67,16 +67,16 @@ export interface FaqItem {
 }
 
 export const hero = {
-  badge: "Jasa Pembuatan Website",
-  titleLead: "Websitenya Kami Urus.",
-  titleHighlight: "Anda Fokus Jualan.",
+  badge: "Digital Growth Partner",
+  titleLead: "Website, Konten, Iklan.",
+  titleHighlight: "Satu Tim. Beres.",
   titleTail: "",
   subtitle:
-    "Website profesional untuk UMKM dan bisnis lokal: cepat, terhubung WhatsApp, siap iklan. Domain, hosting, sampai maintenance, semua kami tangani.",
+    "Zynergy Digital adalah tim di belakang pertumbuhan bisnis Anda: dibangun cepat, diurus jangka panjang, terhubung langsung ke penjualan. Bagian dari grup yang dipercaya industri sejak 2008.",
   trustPoints: [
-    "Online dalam hitungan hari",
-    "Tanpa biaya tersembunyi",
-    "Maintenance termasuk",
+    "Satu tim: tech, creative & marketing",
+    "Diurus jangka panjang",
+    "Dipercaya industri sejak 2008",
   ],
 };
 

@@ -13,7 +13,7 @@ export const siteConfig = {
   endorsement: "Unit bisnis digital & kreatif dari PT Sinergi Mitra Abadi Jaya.",
   domain: "zynergy.co.id",
   url: "https://zynergy.co.id",
-  tagline: "Jasa pembuatan website profesional untuk UMKM, personal brand, dan bisnis lokal.",
+  tagline: "Digital growth partner untuk bisnis Indonesia: website, branding, dan marketing dalam satu tim.",
   description:
     "Zynergy membangun website profesional yang cepat, mobile-friendly, dan siap iklan, membantu bisnis Anda dipercaya pelanggan dan mendapatkan lebih banyak leads via WhatsApp.",
 

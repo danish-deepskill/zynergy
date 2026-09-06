@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/content/site";
 
-export const alt = `${siteConfig.name} | Jasa Pembuatan Website Profesional`;
+export const alt = `${siteConfig.name} | Membantu Bisnis Bertumbuh`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -75,14 +75,14 @@ export default async function Image() {
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div
             style={{
-              fontSize: 68,
+              fontSize: 58,
               fontWeight: 800,
               color: colors.ink,
               lineHeight: 1.15,
               maxWidth: 940,
             }}
           >
-            Jasa Pembuatan Website Profesional
+            Membantu Bisnis Bertumbuh lewat Teknologi, Desain, dan Pemasaran
           </div>
           <div
             style={{
@@ -92,8 +92,8 @@ export default async function Image() {
               maxWidth: 880,
             }}
           >
-            Website cepat, mobile-friendly, dan siap iklan untuk UMKM, personal
-            brand, dan bisnis lokal.
+            Digital growth partner dan pengadaan industri, di bawah grup yang
+            dipercaya sejak 2008.
           </div>
         </div>
 

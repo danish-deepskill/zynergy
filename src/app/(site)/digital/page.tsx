@@ -17,7 +17,7 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Website Profesional",
+  title: "Website, Branding & Digital Marketing",
   description: siteConfig.description,
 };
 

@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Teknologi, Desain, Pemasaran, Produk & Pengadaan`,
+  title: `${siteConfig.name} | Digital, Products & Supply`,
   description: companyHome.subtitle,
 };
 
