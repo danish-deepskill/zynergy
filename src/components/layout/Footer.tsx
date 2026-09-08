@@ -21,7 +21,7 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Link href="/" className="flex items-center gap-2" aria-label={siteConfig.name}>
-            <BrandMark />
+            <BrandMark className="text-navy" />
             <span className="text-lg font-extrabold tracking-tight text-ink">
               {siteConfig.name}
               <span className="text-primary">.</span>

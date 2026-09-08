@@ -1,19 +1,48 @@
-import { useId } from "react";
 import { cn } from "@/lib/cn";
 
-/** Logo mark, same artwork as the favicon (src/app/icon.svg). */
-export function BrandMark({ className }: { className?: string }) {
-  const gradientId = useId();
+/**
+ * Zynergy mark: a Z built from two separate, point-symmetric pieces whose
+ * nodes face each other without touching ("synergy, not fusion").
+ * Geometry mirrors src/app/icon.svg. Colour comes from `currentColor`, so
+ * wrap it in a text-colour class (text-navy on light, text-white on dark).
+ *
+ * `variant="solid"` swaps the ring nodes for filled dots; use it below ~32px
+ * where the ring holes would close up.
+ */
+export function BrandMark({
+  className,
+  variant = "ring",
+}: {
+  className?: string;
+  variant?: "ring" | "solid";
+}) {
   return (
-    <svg viewBox="0 0 100 100" aria-hidden="true" className={cn("size-8", className)}>
-      <defs>
-        <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#3b82f6" />
-          <stop offset="1" stopColor="#1d4ed8" />
-        </linearGradient>
-      </defs>
-      <rect width="100" height="100" rx="22" fill={`url(#${gradientId})`} />
-      <path fill="#fff" d="M27 25H73V38L44.5 62H73V75H27V62L55.5 38H27Z" />
+    <svg
+      viewBox="0 0 1000 1000"
+      aria-hidden="true"
+      className={cn("size-8 shrink-0", className)}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="110"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M160 130H840L588.3 548.9" />
+        <path d="M840 870H160L411.7 451.1" />
+      </g>
+      {variant === "solid" ? (
+        <>
+          <circle cx="527.5" cy="650" r="118" fill="currentColor" />
+          <circle cx="472.5" cy="350" r="118" fill="currentColor" />
+        </>
+      ) : (
+        <g fill="none" stroke="currentColor" strokeWidth="71">
+          <circle cx="527.5" cy="650" r="82.5" />
+          <circle cx="472.5" cy="350" r="82.5" />
+        </g>
+      )}
     </svg>
   );
 }

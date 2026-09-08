@@ -8,6 +8,7 @@ export const contentType = "image/png";
 const colors = {
   primary: "#2563eb",
   primaryDark: "#1d4ed8",
+  navy: "#0b1b3f",
   secondary: "#10b981",
   ink: "#0f1b33",
   muted: "#55617a",
@@ -57,15 +58,21 @@ export default async function Image() {
         />
 
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-          <svg width="72" height="72" viewBox="0 0 100 100">
-            <defs>
-              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stopColor="#3b82f6" />
-                <stop offset="1" stopColor={colors.primaryDark} />
-              </linearGradient>
-            </defs>
-            <rect width="100" height="100" rx="22" fill="url(#g)" />
-            <path fill="#fff" d="M27 25H73V38L44.5 62H73V75H27V62L55.5 38H27Z" />
+          <svg width="72" height="72" viewBox="0 0 1000 1000">
+            <g
+              fill="none"
+              stroke={colors.navy}
+              strokeWidth="110"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M160 130H840L588.3 548.9" />
+              <path d="M840 870H160L411.7 451.1" />
+            </g>
+            <g fill="none" stroke={colors.navy} strokeWidth="71">
+              <circle cx="527.5" cy="650" r="82.5" />
+              <circle cx="472.5" cy="350" r="82.5" />
+            </g>
           </svg>
           <div style={{ fontSize: 44, fontWeight: 700, color: colors.ink }}>
             {siteConfig.name}
