@@ -25,10 +25,10 @@ export const siteConfig = {
 
   // TODO(launch): isi URL sosial media asli, hapus yang tidak dipakai.
   socials: {
-    instagram: "https://instagram.com/zynergy.id",
-    linkedin: "https://linkedin.com/company/zynergy-id",
-    facebook: "https://facebook.com/zynergy.id",
-    youtube: "https://youtube.com/@zynergy",
+    instagram: "https://instagram.com/zynergyid",
+    linkedin: "https://linkedin.com/company/zynergyid",
+    facebook: "https://facebook.com/zynergyid",
+    youtube: "https://youtube.com/@zynergyid",
   },
 
   waMessages: {
