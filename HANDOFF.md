@@ -1,38 +1,66 @@
 # HANDOFF, Zynergy Website Project
 
 > Context document for continuing this work in a new chat/machine.
-> Written 2026-09-01. Everything below is self-contained, no prior chat needed.
-> If working with Claude: read this file fully before making changes, and follow
-> the **Working preferences** section.
+> First written 2026-09-01, last updated 2026-09-09. Self-contained.
+> If working with Claude: read this fully before making changes and follow
+> **Working preferences** (section 7). This repo is PUBLIC: no client deal
+> economics, legal identifiers, or personal data belong here.
+
+---
+
+## 0. State on 2026-09-09 (read this first)
+
+- **Prod:** https://zynergy-dev.vercel.app serves commit `9f26137`
+  (deployed 2026-09-06). Commits `c7d856f` (new brand mark everywhere) and
+  `ade470b` (social handles unified to @zynergyid) are pushed but **not
+  deployed**; the user is checking them locally. Ask before deploying.
+- **Domain:** zynergy.co.id purchase at Hostinger in progress (PANDI
+  document verification pending). `zynergy.co.id` and `www` are already
+  attached to the Vercel project; next step is nameservers to
+  `ns1/ns2.vercel-dns.com`, then update canonical URLs (metadataBase,
+  sitemap, robots, JSON-LD, OG) from zynergy-dev.vercel.app.
+- **Email:** halo@ and info@zynergy.co.id are printed on the site but do
+  not exist yet. Plan: Zoho Mail free (info@ mailbox, halo@ alias), DNS
+  records added via Vercel DNS after the NS switch.
+- **Hosting decision:** stay on Vercel Hobby until the first paying client,
+  then Pro. ONE Vercel project: `/digital` and `/supply` stay as paths;
+  `admin.zynergy.co.id` optional host rewrite; a future SaaS at
+  `app.zynergy.co.id` gets its own project; team docs live in Notion.
+- **Brand:** new Z mark (two separate point-symmetric pieces with facing
+  ring nodes) in `src/components/ui/BrandMark.tsx`, `src/app/icon.svg`
+  (solid-node variant), `src/app/apple-icon.png`, OG image. Navy #0B1B3F is
+  the identity color, blue #2563EB is for actions. Logotype (wordmark) not
+  yet designed. Handles: **@zynergyid** everywhere.
+- **Open content questions:** company address on `/supply` and the compro
+  PDF (Cilandak) vs the registered address (BSD, Tangerang Selatan);
+  placeholders still live (stats 98% / 4.9, testimonials, portfolio, team
+  names on `/tentang`, final pricing).
+- **Team materials** (outside this repo): kickoff deck and brief, Notion
+  team hub, logo asset pack, domain statement letter. Never regenerate
+  handed-off files without an explicit "update".
 
 ---
 
 ## 1. Project goal
 
-Build **zynergy.co.id**, a website-services agency site for the Indonesian market
-(selling website packages to UMKM, local businesses, schools, professionals),
-modeled on the competitor **https://www.digitalinaja.id/** ("CreativeAI").
-User/team: team@deepskill.io.
+Build **zynergy.co.id**: the group site of **Zynergy**, the digital brand of
+PT Sinergi Mitra Abadi Jaya (an Indonesian company founded 2008). Three
+lines: **Zynergy Digital** (flagship: websites, branding, digital marketing,
+sold as yearly subscription/care to UMKM and SMEs, positioned as "Digital
+Growth Partner", not "jasa pembuatan website"), **Zynergy Products**
+(future SaaS), **Zynergy Supply** (industrial procurement, credibility page
+only). Originally modeled on digitalinaja.id, later repositioned upmarket.
+User/team: team@deepskill.io, six-person part-time team, PERINTIS 2026
+university program (Sept to Dec) as first stage, run as a real business.
 
-**Status (2026-09-04): full group site LIVE on https://zynergy-dev.vercel.app**
-(navy gateway, /digital funnel, /supply credibility
-page + compro PDF, /racik-fitur, /tentang, SEO layer all deployed)
-(Vercel project `zynergy`, scope `devdanzen-projects`, deploy via
-`vercel deploy --prod`). Prod infra: **Neon Postgres** (marketplace resource
-`neon-yellow-window`, us-east-1, co-located with iad1 functions) + **Vercel
-Blob** (`zynergy-uploads`, public). Migrations run automatically at build
-time (see `vercel.json`, unpooled connection for migrate, pooled at
-runtime). Code is on GitHub: **danish-deepskill/zynergy** (public, no
-Vercel git integration yet, connecting it in the dashboard would enable
-auto-deploy on push). Blog/portfolio/leads verified live; prod admin awaits
-first-user creation at `/admin` (prod was deliberately NOT seeded; the seed
-dev login is local-only). Local dev workflow unchanged (docker `zynergy-pg`,
-README). Gotchas learned: the Payload Blob plugin must stay registered
-unconditionally (enabled-flag gating) or the admin importMap breaks on
-Vercel; a stray unused Neon resource `neon-sky-ferry` sits in the DeepSkill
-team scope and can be removed. Remaining: real content (TODO(launch)),
-domain registration (NIB + KTP), Meta Pixel + GA4, optional admin
-rebranding (login page shows default Payload logo).
+**Infra:** Vercel project `zynergy` (scope `devdanzen-projects`, deploy via
+`vercel deploy --prod`), **Neon Postgres** (`neon-yellow-window`, us-east-1)
++ **Vercel Blob** (`zynergy-uploads`). Migrations run at build time
+(`vercel.json`, unpooled URL for migrate). GitHub **danish-deepskill/zynergy**
+(public; no Vercel git integration yet; plan: move to a `zynergyid` org and
+consider making it private). Prod `/admin` awaits first-user creation
+(never seeded). Gotcha: keep the Payload Blob plugin registered
+unconditionally (enabled-flag gating) or the admin importMap breaks.
 
 ---
 
@@ -159,7 +187,7 @@ with TODO(launch) placeholder team members (content in
 the footer. Everything above is deployed to prod.
 
 All copy is **original Indonesian** (intent mirrors competitor, wording does not).
-Hero visual is a CSS-only browser mockup, no image assets exist yet.
+Hero visual is CSS-only (GridPattern blueprint, CubePattern crates on /supply); no stock imagery by decision. Brand mark and favicon are inline SVG (see section 0).
 
 ### Verified (2026-09-01)
 
@@ -175,33 +203,32 @@ Hero visual is a CSS-only browser mockup, no image assets exist yet.
 
 | Item | Current placeholder | Action |
 |---|---|---|
-| WhatsApp number | `6281234567890` in site.ts | Replace with real business number |
 | Pricing | Starter 500K / Business 950K (highlighted) / Premium 1.5JT per year | Finalize real prices & benefits |
 | Testimonials | 3 fake quotes, "Nama Klien" | **MUST replace with real ones before launch** |
 | Portfolio | 3 invented projects w/ gradient thumbnails | Replace with real projects + screenshots |
-| Stats | 50+ / 98% / 4.9/5 / 3-7 | Update with real numbers |
-| Socials | zynergy.id handles in site.ts | Real URLs or remove |
-| Email | halo@zynergy.co.id | Confirm mailbox exists |
+| Stats | 5+ (real) / 98% / 4.9/5 (fake) | Replace 98% and 4.9 with real numbers or remove |
+| Socials | @zynergyid URLs in site.ts (accounts being claimed) | Confirm each account exists |
+| Email | halo@ and info@zynergy.co.id | Mailboxes do not exist until Zoho is set up |
 
 ---
 
 ## 6. Next steps (in order)
 
-~~Done: branding/OG image, git + GitHub, Vercel deploy, Phase 2 build &
-prod deploy (Neon + Blob + build-time migrations).~~
-
-1. Create the first prod admin user at https://zynergy-dev.vercel.app/admin
-   (user does this; use a real email + strong password)
-2. Fill real content (section 5 above), via `/admin` for blog/portfolio,
-   via `src/content/` for landing copy/pricing/testimonials
-3. **Domain:** register zynergy.co.id early, .co.id requires **NIB + KTP**
-   via an Indonesian registrar; DNS → Vercel
-4. Meta Pixel + GA4 via `next/script` (was deferred; add before running ads)
-5. Optional polish: Zynergy branding on the admin login (custom
-   `admin.components.graphics`), on-demand revalidation hook so new posts
-   appear on /blog instantly (pages cache for 1h), connect Vercel↔GitHub
-   for auto-deploys, delete stray `neon-sky-ferry` resource (DeepSkill team)
-6. Phase 3 (optional): client login via Payload auth
+1. Finish domain: Hostinger verification, nameservers to Vercel, verify with
+   `vercel domains inspect zynergy.co.id`, set primary, update canonical
+   URLs in `src/content/site.ts` and metadata, ask, deploy.
+2. Zoho Mail: add TXT verification, MX, SPF, DKIM, DMARC via Vercel DNS.
+3. Deploy the pending brand-mark and socials commits after the user's local
+   check.
+4. Resolve the company address question (Cilandak vs registered BSD) on
+   `/supply` and in `scripts/generate-company-profile.py`, regenerate the
+   compro PDF only when asked.
+5. Real content: team names/photos, stats, testimonials, portfolio, final
+   pricing (`TODO(launch)`), first prod admin user.
+6. Meta Pixel + GA4 via `next/script` before running ads.
+7. Optional: `admin.zynergy.co.id` host rewrite (Next 16 `proxy.ts`), Vercel
+   Pro when the first client pays, GitHub org move, Vercel git integration,
+   admin login branding, delete stray `neon-sky-ferry` resource.
 
 ---
 
@@ -217,9 +244,25 @@ Act as a **senior fullstack engineer with clean-code standards**:
 - Verify with `pnpm build` + `pnpm lint` before declaring anything done
 - The codebase must stay maintainable by a JS/TS team as it grows into Phase 2
 
-Communication: user prefers concrete visual mockups over verbal design
-descriptions; decisions were made via option-choosing (give recommendations
-with clear trade-offs).
+Communication: user prefers concrete deliverables (files, mockups) over
+descriptions; give one firm recommendation with trade-offs, and if they keep
+hesitating, say plainly that both options work so they act today. The user
+writes mostly in Indonesian; answer in Indonesian unless they write English.
+
+Hard rules (learned from corrections):
+- **Never deploy to prod without an explicit "deploy".** Commit and push
+  normally; deploying is the user's call.
+- **Never regenerate handed-off deliverables** (kickoff deck, brief,
+  compro PDF, logo pack) without an explicit "update".
+- **No em dashes anywhere**: repo copy, chat, documents. Commas, periods,
+  colons.
+- The user runs their own server on :3000; `next start` serves a frozen
+  build, so after changes rebuild and restart (or use `pnpm dev`). Stop
+  Claude's preview server when done.
+- Team-facing documents: short, friendly, straightforward Indonesian.
+- Language register: English for brand labels and taglines, Indonesian for
+  persuasion and SEO copy. Brand-line slugs are English (`/digital`,
+  `/supply`).
 
 ---
 
