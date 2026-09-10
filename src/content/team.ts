@@ -1,7 +1,6 @@
 /**
- * Team page content. TODO(launch): replace placeholder names/bios with the
- * real six people and add photos (photo field is optional; initials-avatar
- * renders when absent).
+ * Team page content. Photo field is optional; an initials avatar renders
+ * when absent.
  */
 
 export interface TeamMember {
@@ -45,35 +44,36 @@ export const nameMeaning = {
   ],
 } as const;
 
+// TODO(launch): add photos (photo: "/team/nama.jpg") once available.
 export const teamMembers: TeamMember[] = [
   {
-    name: "Nama Anggota", // TODO(launch)
+    name: "Danish",
     role: "Lead",
     bio: "Mengarahkan strategi, visi, dan kualitas di setiap proyek.",
   },
   {
-    name: "Nama Anggota", // TODO(launch)
+    name: "Royan",
     role: "Developer",
     bio: "Membangun website dan aplikasi yang cepat, aman, dan mudah dirawat.",
   },
   {
-    name: "Nama Anggota", // TODO(launch)
+    name: "Alan",
+    role: "Business",
+    bio: "Menjaga arah bisnis dan kemitraan agar layanan selalu relevan.",
+  },
+  {
+    name: "Syafira",
     role: "Marketing",
     bio: "Membantu klien menemukan solusi yang pas, tanpa jargon teknis.",
   },
   {
-    name: "Nama Anggota", // TODO(launch)
-    role: "Designer",
-    bio: "Merancang identitas visual dan tampilan yang memperkuat kepercayaan brand.",
-  },
-  {
-    name: "Nama Anggota", // TODO(launch)
+    name: "Anggun",
     role: "Finance",
     bio: "Menjaga penawaran, penagihan, dan langganan berjalan rapi dan transparan.",
   },
   {
-    name: "Nama Anggota", // TODO(launch)
-    role: "Business",
-    bio: "Menjaga arah bisnis dan kemitraan agar layanan selalu relevan.",
+    name: "Nadhy",
+    role: "Designer",
+    bio: "Merancang identitas visual dan tampilan yang memperkuat kepercayaan brand.",
   },
 ];
