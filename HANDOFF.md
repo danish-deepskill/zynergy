@@ -10,9 +10,9 @@
 
 ## 0. State on 2026-09-09 (read this first)
 
-- **Prod:** serves commit `534023a` (deployed 2026-09-10 on the user's
-  "push ke prod"): new brand mark everywhere, social handles unified to
-  @zynergyid. https://zynergy.co.id is live on Vercel and is already the
+- **Prod:** serves commit `d078631` (deployed 2026-09-10 on the user's
+  "push ke prod"): new brand mark, @zynergyid handles, real team names on
+  /tentang (photos still pending). https://zynergy.co.id is live on Vercel and is already the
   canonical URL (site.ts, og:url, sitemap verified 2026-09-10). Ask before
   deploying.
 - **Domain:** zynergy.co.id purchase at Hostinger in progress (PANDI
@@ -35,7 +35,7 @@
 - **Open content questions:** company address on `/supply` and the compro
   PDF (Cilandak) vs the registered address (BSD, Tangerang Selatan);
   placeholders still live (stats 98% / 4.9, testimonials, portfolio, team
-  names on `/tentang`, final pricing).
+  photos on `/tentang`, final pricing).
 - **Team materials** (outside this repo): kickoff deck and brief, Notion
   team hub, logo asset pack, domain statement letter. Never regenerate
   handed-off files without an explicit "update".
