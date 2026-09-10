@@ -10,10 +10,12 @@
 
 ## 0. State on 2026-09-09 (read this first)
 
-- **Prod:** https://zynergy-dev.vercel.app serves commit `9f26137`
-  (deployed 2026-09-06). Commits `c7d856f` (new brand mark everywhere) and
-  `ade470b` (social handles unified to @zynergyid) are pushed but **not
-  deployed**; the user is checking them locally. Ask before deploying.
+- **Prod:** serves commit `534023a` (deployed 2026-09-10 on the user's
+  "push ke prod"): new brand mark everywhere, social handles unified to
+  @zynergyid. https://zynergy.co.id already resolves to Vercel (200) as of
+  2026-09-10, so canonical URLs (metadataBase, sitemap, robots, JSON-LD, OG)
+  still pointing at zynergy-dev.vercel.app are the next fix. Ask before
+  deploying.
 - **Domain:** zynergy.co.id purchase at Hostinger in progress (PANDI
   document verification pending). `zynergy.co.id` and `www` are already
   attached to the Vercel project; next step is nameservers to
