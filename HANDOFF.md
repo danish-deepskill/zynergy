@@ -1,28 +1,33 @@
 # HANDOFF, Zynergy Website Project
 
 > Context document for continuing this work in a new chat/machine.
-> First written 2026-09-01, last updated 2026-09-09. Self-contained.
+> First written 2026-09-01, last updated 2026-09-10. Self-contained.
 > If working with Claude: read this fully before making changes and follow
 > **Working preferences** (section 7). This repo is PUBLIC: no client deal
 > economics, legal identifiers, or personal data belong here.
 
 ---
 
-## 0. State on 2026-09-09 (read this first)
+## 0. State on 2026-09-10 (read this first)
 
 - **Prod:** serves commit `d078631` (deployed 2026-09-10 on the user's
   "push ke prod"): new brand mark, @zynergyid handles, real team names on
   /tentang (photos still pending). https://zynergy.co.id is live on Vercel and is already the
   canonical URL (site.ts, og:url, sitemap verified 2026-09-10). Ask before
   deploying.
-- **Domain:** zynergy.co.id purchase at Hostinger in progress (PANDI
-  document verification pending). `zynergy.co.id` and `www` are already
-  attached to the Vercel project; next step is nameservers to
-  `ns1/ns2.vercel-dns.com`, then update canonical URLs (metadataBase,
-  sitemap, robots, JSON-LD, OG) from zynergy-dev.vercel.app.
-- **Email:** halo@ and info@zynergy.co.id are printed on the site but do
-  not exist yet. Plan: Zoho Mail free (info@ mailbox, halo@ alias), DNS
-  records added via Vercel DNS after the NS switch.
+- **Domain:** zynergy.co.id LIVE, nameservers on Vercel, DNS managed in
+  the Vercel project (`vercel dns ls zynergy.co.id --scope devdanzen-projects`).
+- **Email (set up 2026-09-10):** Zoho Mail Forever Free plan (5 users, no
+  IMAP), org super admin **admin@zynergy.co.id** (display "Zynergy Admin",
+  login for all brand accounts, only Danish). DNS done: MX (mx/mx2/mx3.zoho.com),
+  SPF, DKIM (zmail._domainkey), DMARC p=none reporting to admin@. Mailbox
+  plan: info@ (aliases halo@, sales@, marketing@), danish@, rizal@; team
+  decided two people for now, aliases for roles, mailboxes for people.
+- **Brand accounts:** Google account created with admin@ (for YouTube,
+  Business Profile, Analytics). Instagram + Threads **@zynergyid** created.
+  Facebook Page next (from Danish's personal profile, add Rizal as second
+  admin, link IG, then Meta Business Suite). Social profile pictures with
+  70% mark in `~/Downloads/zynergy-logo/social/` (white-on-navy is primary).
 - **Hosting decision:** stay on Vercel Hobby until the first paying client,
   then Pro. ONE Vercel project: `/digital` and `/supply` stay as paths;
   `admin.zynergy.co.id` optional host rewrite; a future SaaS at
