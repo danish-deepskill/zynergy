@@ -12,9 +12,8 @@
 
 - **Prod:** serves commit `534023a` (deployed 2026-09-10 on the user's
   "push ke prod"): new brand mark everywhere, social handles unified to
-  @zynergyid. https://zynergy.co.id already resolves to Vercel (200) as of
-  2026-09-10, so canonical URLs (metadataBase, sitemap, robots, JSON-LD, OG)
-  still pointing at zynergy-dev.vercel.app are the next fix. Ask before
+  @zynergyid. https://zynergy.co.id is live on Vercel and is already the
+  canonical URL (site.ts, og:url, sitemap verified 2026-09-10). Ask before
   deploying.
 - **Domain:** zynergy.co.id purchase at Hostinger in progress (PANDI
   document verification pending). `zynergy.co.id` and `www` are already
