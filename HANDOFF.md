@@ -41,6 +41,14 @@
   PDF (Cilandak) vs the registered address (BSD, Tangerang Selatan);
   placeholders still live (stats 98% / 4.9, testimonials, portfolio, team
   photos on `/tentang`, final pricing).
+- **Design line (added 2026-09-10, designer's request):** fourth line
+  **Zynergy Design** (`/design`, content in `src/content/design.ts`):
+  standalone design deliverables (branding, packaging, print, compro/deck,
+  social visuals, merchandise). Boundary: growth-oriented creative (website
+  visuals, ad creative, content as a service) stays inside Digital's three
+  capabilities; /design cross-links to /digital. Interim page: hero, 6
+  services, 3 steps, WA CTAs, no pricing until Nadhy defines packages.
+  Gateway now 1 + 3 cards; nav has 9 items (verified one row at 1280px).
 - **Team materials** (outside this repo): kickoff deck and brief, Notion
   team hub, logo asset pack, domain statement letter. Never regenerate
   handed-off files without an explicit "update".
@@ -50,7 +58,7 @@
 ## 1. Project goal
 
 Build **zynergy.co.id**: the group site of **Zynergy**, the digital brand of
-PT Sinergi Mitra Abadi Jaya (an Indonesian company founded 2008). Three
+PT Sinergi Mitra Abadi Jaya (an Indonesian company founded 2008). Four
 lines: **Zynergy Digital** (flagship: websites, branding, digital marketing,
 sold as yearly subscription/care to UMKM and SMEs, positioned as "Digital
 Growth Partner", not "jasa pembuatan website"), **Zynergy Products**

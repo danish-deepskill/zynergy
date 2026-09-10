@@ -39,7 +39,7 @@ export const siteConfig = {
     features: (featureList: string, addOnList?: string) =>
       `Halo Zynergy! Saya ingin website dengan fitur: ${featureList}.${addOnList ? ` Tambahan: ${addOnList}.` : ""} Bisa dibantu rekomendasinya?`,
     design:
-      "Halo Zynergy! Saya ingin konsultasi kebutuhan desain (logo/konten/animasi). Bisa dibantu?",
+      "Halo Zynergy Design! Saya butuh desain untuk usaha saya (logo/kemasan/cetak/company profile). Bisa dibantu?",
     custom:
       "Halo Zynergy! Saya punya kebutuhan aplikasi/sistem yang lebih kompleks. Bisa diskusi scope-nya?",
     pengadaan:
@@ -49,6 +49,7 @@ export const siteConfig = {
   nav: [
     { label: "Beranda", href: "/" },
     { label: "Digital", href: "/digital" },
+    { label: "Design", href: "/design" },
     { label: "Racik Fitur", href: "/racik-fitur" },
     { label: "Paket Harga", href: "/digital#paket" },
     { label: "Portofolio", href: "/portofolio" },

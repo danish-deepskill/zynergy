@@ -6,6 +6,7 @@ import {
   type LucideIcon,
   MonitorSmartphone,
   Package,
+  PenTool,
   Router,
   Wrench,
   Zap,
@@ -36,7 +37,7 @@ export const companyHome = {
   eyebrow: "PT Sinergi Mitra Abadi Jaya",
   title: "Membantu Bisnis Bertumbuh lewat Teknologi, Desain, dan Pemasaran.",
   subtitle:
-    "Zynergy adalah rumah bagi tiga lini bisnis PT Sinergi Mitra Abadi Jaya: digital, produk software, dan pengadaan barang industri.",
+    "Zynergy adalah rumah bagi empat lini bisnis PT Sinergi Mitra Abadi Jaya: digital, desain, produk software, dan pengadaan barang industri.",
 } as const;
 
 export const businessLines: BusinessLine[] = [
@@ -51,6 +52,17 @@ export const businessLines: BusinessLine[] = [
     cta: "Jelajahi Digital",
     icon: MonitorSmartphone,
     flagship: true,
+  },
+  {
+    value: "design",
+    name: "Zynergy Design",
+    tagline: "Branding, Packaging & Print",
+    description:
+      "Tim desain untuk usaha yang ingin tampil meyakinkan: logo dan identitas brand, kemasan, materi cetak, sampai company profile.",
+    points: ["Logo & identitas brand", "Kemasan & materi cetak", "Company profile & deck"],
+    href: "/design",
+    cta: "Jelajahi Design",
+    icon: PenTool,
   },
   {
     value: "products",

@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Digital, Products & Supply`,
+  title: `${siteConfig.name} | Digital, Design, Products & Supply`,
   description: companyHome.subtitle,
 };
 
@@ -60,7 +60,7 @@ export default function Home() {
         </section>
 
         <section className="relative px-4 pb-24 sm:px-6 lg:px-8">
-        {/* Row 1: Digital flagship (full width). Row 2: Products + Supply. */}
+        {/* Row 1: Digital flagship (full width). Row 2: Design + Products + Supply. */}
         <div className="mx-auto grid w-full max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-6">
           {businessLines.map((line, index) => (
             <Reveal
@@ -68,7 +68,7 @@ export default function Home() {
               delay={index * 0.08}
               className={cn(
                 "h-full",
-                line.flagship ? "sm:col-span-2 lg:col-span-6" : "lg:col-span-3",
+                line.flagship ? "sm:col-span-2 lg:col-span-6" : "lg:col-span-2",
               )}
             >
               <article
