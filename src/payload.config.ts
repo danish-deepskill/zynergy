@@ -19,8 +19,14 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 export default buildConfig({
   admin: {
     user: Users.slug,
+    components: {
+      graphics: {
+        Logo: "@/components/admin/Branding#Logo",
+        Icon: "@/components/admin/Branding#Icon",
+      },
+    },
     meta: {
-      titleSuffix: ` | ${siteConfig.name} Admin`,
+      titleSuffix: " | Zynergy Admin",
     },
   },
   collections: [Posts, Projects, Media, Leads, LeadFiles, Users],
