@@ -1,16 +1,17 @@
 /**
- * Software product catalog (Zynergy Digital line). Single source of truth for
- * what exists and where it points. Nothing renders publicly while status is
- * "draft"; when the first product turns "beta"/"live", build /produk pages
- * that list only non-draft entries. Product apps live in their OWN repos and
- * domains ("by Zynergy"); this site only markets and links them.
+ * App catalog (Zynergy Apps line; the line was called "Products" until
+ * 2026-09-11). Single source of truth for what exists and where it points.
+ * Nothing renders publicly while status is "draft"; when the first app turns
+ * "beta"/"live", build /apps pages that list only non-draft entries. Each app
+ * lives in its OWN repo and domain ("by Zynergy"); this site only markets and
+ * links them.
  *
  * Names below are WORKING NAMES. TODO(launch): validate names & availability.
  */
 
-export type ProductStatus = "draft" | "beta" | "live";
+export type AppStatus = "draft" | "beta" | "live";
 
-export interface Product {
+export interface AppEntry {
   slug: string;
   /** Working name until validated. */
   name: string;
@@ -20,14 +21,14 @@ export interface Product {
   audience: string;
   /** Recurring model per business strategy (subscriptions over one-offs). */
   pricingModel: "subscription" | "one-time" | "freemium";
-  status: ProductStatus;
-  /** The product's own app/marketing URL once it exists. */
+  status: AppStatus;
+  /** The app's own marketing or login URL once it exists. */
   url?: string;
   /** Internal MVP scope notes; not rendered. */
   mvp: string;
 }
 
-export const products: Product[] = [
+export const apps: AppEntry[] = [
   {
     slug: "zybalas",
     name: "ZyBalas",

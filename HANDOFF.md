@@ -61,8 +61,8 @@ Build **zynergy.co.id**: the group site of **Zynergy**, the digital brand of
 PT Sinergi Mitra Abadi Jaya (an Indonesian company founded 2008). Four
 lines: **Zynergy Digital** (flagship: websites, branding, digital marketing,
 sold as yearly subscription/care to UMKM and SMEs, positioned as "Digital
-Growth Partner", not "jasa pembuatan website"), **Zynergy Products**
-(future SaaS), **Zynergy Supply** (industrial procurement, credibility page
+Growth Partner", not "jasa pembuatan website"), **Zynergy Apps**
+(future SaaS; called "Products" until 2026-09-11), **Zynergy Supply** (industrial procurement, credibility page
 only). Originally modeled on digitalinaja.id, later repositioned upmarket.
 User/team: team@deepskill.io, six-person part-time team, PERINTIS 2026
 university program (Sept to Dec) as first stage, run as a real business.
@@ -151,8 +151,8 @@ is a navy group gateway with THREE lines (content in company.ts):
 **Zynergy Digital** (flagship, full-width card; merges the former
 Technology/Creative/Marketing lines per the same-buyer rule; full funnel
 at `/digital` incl. a Whitebox-style "Satu Tim, Tiga Kapabilitas"
-3-column section), **Zynergy Products** (upcoming card, drafts in
-products.ts), **Zynergy Supply** (`/supply`; steel+amber industrial
+3-column section), **Zynergy Apps** (upcoming card, drafts in
+apps.ts), **Zynergy Supply** (`/supply`; steel+amber industrial
 design, 13-client marquee, six categories, identity block + compro PDF at
 /docs/, contracts under the PT name). Former routes /technology and
 /creative were REMOVED (no redirects, pre-launch). Gateway motto follows
@@ -168,11 +168,14 @@ PUBLIC; client names, financials, vendor IDs, and deal economics live ONLY
 in Claude's private local memory, never here. Full credibility page (client
 list needs clearance, certifications, company profile PDF) awaits user.
 
-**Products plan (decided 2026-09-03, not yet built):** the Digital line
-will later carry software products (SaaS/AI tools, courses) besides jasa.
+**Apps plan (decided 2026-09-03 as "Products"; renamed Zynergy Apps on
+2026-09-11 because customers say "aplikasi", the subdomain is app., and
+"Products" clashed with Supply's physical goods; not yet built):** the
+Digital line will later carry software apps (SaaS/AI tools, courses)
+besides jasa.
 Rules: this repo is marketing-only; every product lives in its OWN repo,
 deploy, and eventually own domain ("by Zynergy"); this site only lists and
-links them via a catalog (`src/content/products.ts` → `/produk/<slug>`
+links them via a catalog (`src/content/apps.ts` → `/apps/<slug>`
 marketing cards, built only when the first product is announceable; no
 "coming soon" shells). Incubate under the Zynergy umbrella, graduate to
 own brand after proven demand. Sequencing: productized vertical services

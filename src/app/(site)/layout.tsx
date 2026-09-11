@@ -14,7 +14,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Digital, Products & Supply`,
+    default: `${siteConfig.name} | Digital, Design, Apps & Supply`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Digital, Products & Supply`,
+    title: `${siteConfig.name} | Digital, Design, Apps & Supply`,
     description: siteConfig.description,
   },
   twitter: {

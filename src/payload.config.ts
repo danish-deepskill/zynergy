@@ -12,7 +12,6 @@ import { Posts } from "@/collections/Posts";
 import { Projects } from "@/collections/Projects";
 import { Users } from "@/collections/Users";
 import { briefUpload } from "@/content/brief";
-import { siteConfig } from "@/content/site";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
 
