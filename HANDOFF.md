@@ -10,9 +10,12 @@
 
 ## 0. State on 2026-09-10 (read this first)
 
-- **Prod:** serves commit `d8fb52c` (deployed 2026-09-10 on the user's
-  "deploy"): Design line live at /design, gateway 1 + 3 cards, new brand
-  mark, @zynergyid handles, real team names on /tentang (photos pending). https://zynergy.co.id is live on Vercel and is already the
+- **Prod:** serves commit `ab7dddd` (deployed 2026-09-11 night on the
+  user's "deploy"): Zynergy Apps naming (was Products) on the gateway and
+  titles, Zynergy Admin branding in /admin, Design line at /design, gateway
+  1 + 3 cards, @zynergyid handles, real team names on /tentang (photos
+  pending). Sister app: Zynergy Hub is live at hub.zynergy.co.id (repo
+  zynergy-hub). https://zynergy.co.id is live on Vercel and is already the
   canonical URL (site.ts, og:url, sitemap verified 2026-09-10). Ask before
   deploying.
 - **Domain:** zynergy.co.id LIVE, nameservers on Vercel, DNS managed in
